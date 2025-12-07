@@ -1,23 +1,21 @@
 /**
- * PROJECT: Neural Portfolio (zhnuksyh)
- * VERSION: 2.1 (Refactored)
+ * PROJECT: Neural Portfolio (Zahin Ukasyah)
+ * VERSION: 3.0 (Routing & CMS Features)
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import GridBackground from './components/layout/GridBackground';
-import Navbar from './components/layout/Navbar';
-import HeroSection from './components/sections/HeroSection';
-import AboutSection from './components/sections/AboutSection';
-import ExperienceSection from './components/sections/ExperienceSection';
-import ProjectsSection from './components/sections/ProjectsSection';
-import SkillsSection from './components/sections/SkillsSection';
-import CollabSection from './components/sections/CollabSection';
-import ArticlesSection from './components/sections/ArticlesSection';
-import ContactSection from './components/sections/ContactSection';
+import Home from './pages/Home';
+import ProjectDetail from './pages/ProjectDetail';
+import ArticleDetail from './pages/ArticleDetail';
+import AllProjects from './pages/AllProjects';
+import AllArticles from './pages/AllArticles';
 
-export default function App() {
-    const [darkMode, setDarkMode] = useState(false);
-    const scrollRef = useRef(null);
+// Wrapper to handle scroll reset and dark mode inheritance
+const AppContent = () => {
+    const [darkMode, setDarkMode] = useState(true);
+    const location = useLocation();
 
     // LOGIC: Handles the HTML class switching for Tailwind Dark Mode
     useEffect(() => {
@@ -28,16 +26,10 @@ export default function App() {
         }
     }, [darkMode]);
 
-    // LOGIC: Horizontal Scroll Handler for Project Carousel
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const scrollAmount = 300;
-            scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
-        }
-    };
-
-    // LOGIC: Smooth Scroll with Offset for Fixed Header
+    // LOGIC: Smooth Scroll with Offset for Fixed Header (extracted for reuse)
     const scrollToSection = (id) => {
+        // If not on home page, we can't scroll to section immediately. 
+        // In a real app we might redirect to home then scroll, but for now we pass this prop only to Home.
         const element = document.getElementById(id);
         if (element) {
             const offset = 80;
@@ -55,7 +47,6 @@ export default function App() {
 
     return (
         <div className={`min-h-screen transition-colors duration-500 selection:bg-gray-800 selection:text-white dark:selection:bg-white dark:selection:text-black font-sans ${darkMode ? 'bg-[#121212] text-[#d4d4d4]' : 'bg-[#faf9f6] text-[#2d2d2d]'}`}>
-
             <GridBackground />
 
             <style>{`
@@ -65,31 +56,21 @@ export default function App() {
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
 
-            {/* Main Orchestrator */}
-            <Navbar darkMode={darkMode} setDarkMode={setDarkMode} scrollToSection={scrollToSection} />
-
-            <main className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-20">
-                <HeroSection scrollToSection={scrollToSection} />
-                <AboutSection />
-                <ExperienceSection />
-                <ProjectsSection scrollRef={scrollRef} scroll={scroll} />
-                <SkillsSection />
-                <CollabSection />
-                <ArticlesSection />
-                <ContactSection />
-
-                {/* Footer (Simple enough to keep inline or extract to Footer.jsx) */}
-                <footer className="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-                    <div className="mb-4 md:mb-0">
-                        <p>© 2024 zhnuksyh. Kuala Lumpur.</p>
-                    </div>
-                    <div className="flex gap-6">
-                        <a href="#" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">Resume</a>
-                        <a href="#" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">Chess.com</a>
-                        <a href="#" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">Email</a>
-                    </div>
-                </footer>
-            </main>
+            <Routes>
+                <Route path="/" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} scrollToSection={scrollToSection} />} />
+                <Route path="/project/:id" element={<ProjectDetail />} />
+                <Route path="/projects" element={<AllProjects />} />
+                <Route path="/article/:id" element={<ArticleDetail />} />
+                <Route path="/articles" element={<AllArticles />} />
+            </Routes>
         </div>
+    );
+};
+
+export default function App() {
+    return (
+        <Router basename="/syah-portfolio">
+            <AppContent />
+        </Router>
     );
 }

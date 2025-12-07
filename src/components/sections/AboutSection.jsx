@@ -13,24 +13,24 @@ const AboutSection = () => (
 
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <Coffee size={22} className="text-gray-500" />
-                The Backstory
+                About Me
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12 text-gray-600 dark:text-gray-300 leading-relaxed">
                 <div className="space-y-4">
                     <p>
-                        My journey began not with code, but with a fascination for patterns. As a kid, I was obsessed with chess—how a finite set of rules could generate infinite complexities.
+                        I am a <strong>Software Engineering student</strong> at <strong>Universiti Teknologi Malaysia</strong>, specializing in <strong>AI and NLP</strong>.
                     </p>
                     <p>
-                        When I discovered programming, it felt like discovering a new board, one where I could write the rules myself. I started with simple scripts to automate my daily tasks, but soon fell down the rabbit hole of data structures and algorithms.
+                        My passion lies in bridging the gap between theoretical AI models and practical, scalable applications.
                     </p>
                 </div>
                 <div className="space-y-4">
                     <p>
-                        The pivot to AI happened during my university years. I realized that traditional coding was about telling a computer <i>what</i> to do, but Machine Learning was about teaching it <i>how</i> to learn.
+                        I have a proven ability in <strong>model optimization</strong>, including LLM quantization (GGUF, vLLM) and Agentic RAG pipeline development.
                     </p>
                     <p>
-                        Today, I build systems that find signal in the noise. I believe that the best AI isn't just accurate—it's interpretable, efficient, and seamlessly integrated into human workflows.
+                        Beyond AI, I have a strong foundation in <strong>scalable full-stack development</strong> (React, Next.js), allowing me to deliver high-performance, integrated intelligent applications.
                     </p>
                 </div>
             </div>

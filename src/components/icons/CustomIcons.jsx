@@ -14,21 +14,53 @@ export const XIcon = ({ size = 24, className }) => (
  * ChessPawn
  * Symbolism: Strategy, humble beginnings, potential for promotion.
  */
+/**
+ * ChessPawn
+ * Detailed outline style (Flaticon inspired)
+ */
 export const ChessPawn = ({ size = 24, className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M12 2a3 3 0 0 0-3 3c0 .5.15.97.41 1.38A6.96 6.96 0 0 0 7.1 7.84L6.54 9.53l1.11 3.32A5.99 5.99 0 0 0 7 14c-1.1 0-2 .9-2 2v6h14v-6c0-1.1-.9-2-2-2-1.2 0-2.32.33-3.29.91l-1.6-4.8 1.68-1.68c.73.15 1.49.24 2.29.24 1.3 0 2.5-.22 3.44-.62l.56-1.68-1.1-1.17A7.03 7.03 0 0 0 14.59 5.38C14.85 4.97 15 4.5 15 4a3 3 0 0 0-3-3z" />
-        <path d="M12 21v-4M8 21h8" />
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M19.16 53H44.84" />
+        <path d="M44.84 53C47.01 53 47.96 54.19 47.78 55.43C47.6 56.66 46.54 59 44.84 59H19.16C17.46 59 16.4 56.66 16.22 55.43C16.03 54.19 16.99 53 19.16 53Z" />
+        <path d="M22.5 42H41.5" />
+        <path d="M41.5 42L44.84 53H19.16L22.5 42Z" />
+        <path d="M28.09 30H35.91" />
+        <path d="M35.91 30C39.46 30 40.52 35.8 41.5 42H22.5C23.48 35.8 24.54 30 28.09 30Z" />
+        <circle cx="32" cy="15" r="10" />
     </svg>
 );
 
 /**
  * ChessKnight
- * Symbolism: Lateral thinking, non-linear movement, "The Backstory" hero icon.
+ * Detailed outline style (Flaticon inspired)
  */
 export const ChessKnight = ({ size = 24, className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M19 22H5" />
-        <path d="M13.5 2H10.5C9.39543 2 8.5 2.89543 8.5 4V14L5 18V22H19V18L15.5 14V8" />
-        <path d="M10.5 6H13.5" />
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M16 53H48" />
+        <path d="M48 53C50.17 53 51.12 54.19 50.94 55.43C50.76 56.66 49.7 59 48 59H16C14.3 59 13.24 56.66 13.06 55.43C12.87 54.19 13.83 53 16 53Z" />
+        <path d="M27 25C27 25 24 23 24 18C24 13 28 8 35 6C42 4 48 8 48 8C48 8 50 12 48 18C46 24 43 27 41 29L39 42L42 53H22L25 42C25 42 27.5 38 27 34C26.5 30 25 30 23 32C21 34 18 34 18 34" />
+        <circle cx="36" cy="18" r="2" fill="currentColor" />
     </svg>
 );

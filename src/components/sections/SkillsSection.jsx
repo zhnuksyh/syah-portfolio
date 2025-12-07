@@ -1,36 +1,103 @@
 import React from 'react';
-import { Globe, Cpu, Layers, Database, Server, Layout, Terminal, Box, Code } from 'lucide-react';
-import SkillCard from '../ui/SkillCard';
+import { Cpu } from 'lucide-react';
+import css3Icon from '../../assets/css3.svg';
 
-const SkillsSection = () => (
-    <section id="skills" className="mb-32">
-        <h2 className="text-xl font-semibold mb-8">Skills & Tools</h2>
-
-        <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3">
-            {/* Inline definition for prototyping, but ideally moved to constants.js */}
-            <SkillCard
-                icon={() => (
-                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
-                        <path d="M12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10z" fillOpacity="0.1" />
-                        <path d="M14.25 5.5h-4.5c-1.5 0-2.5 1-2.5 2.5v2h4v-1h3v4h-7v2.5c0 1.5 1 2.5 2.5 2.5h4.5c1.5 0 2.5-1 2.5-2.5v-2h-4v1h-3v-4h7v-2.5c0-1.5-1-2.5-2.5-2.5z" />
-                    </svg>
-                )}
-                name="Python"
-                colorClass="bg-[#3776AB]/5 dark:bg-[#3776AB]/10"
-                iconColor="text-[#3776AB] dark:text-[#3776AB]"
+const SkillIcon = ({ name, url }) => (
+    <div className="flex flex-col items-center justify-center p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#202020] hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-lg dark:hover:shadow-black/50 group w-full aspect-square">
+        <div className="w-10 h-10 mb-3 flex items-center justify-center p-2 rounded-lg bg-gray-50 dark:bg-[#252525] group-hover:bg-white dark:group-hover:bg-[#303030] transition-colors relative">
+            {/* Icon is strict grayscale by default, full color on hover */}
+            <img
+                src={url.replace('/gray', '')}
+                alt={name}
+                className="absolute inset-0 w-full h-full object-contain p-2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"
             />
-
-            <SkillCard icon={Globe} name="React" colorClass="bg-[#61DAFB]/5 dark:bg-[#61DAFB]/10" iconColor="text-[#00B4D8] dark:text-[#61DAFB]" />
-            <SkillCard icon={Cpu} name="PyTorch" colorClass="bg-[#EE4C2C]/5 dark:bg-[#EE4C2C]/10" iconColor="text-[#EE4C2C] dark:text-[#EE4C2C]" />
-            <SkillCard icon={Layers} name="TensorFlow" colorClass="bg-[#FF6F00]/5 dark:bg-[#FF6F00]/10" iconColor="text-[#FF6F00] dark:text-[#FF6F00]" />
-            <SkillCard icon={Database} name="SQL" colorClass="bg-[#336791]/5 dark:bg-[#336791]/10" iconColor="text-[#336791] dark:text-[#60A5FA]" />
-            <SkillCard icon={Server} name="Docker" colorClass="bg-[#2496ED]/5 dark:bg-[#2496ED]/10" iconColor="text-[#2496ED] dark:text-[#2496ED]" />
-            <SkillCard icon={Layout} name="Figma" colorClass="bg-[#F24E1E]/5 dark:bg-[#F24E1E]/10" iconColor="text-[#F24E1E] dark:text-[#F24E1E]" />
-            <SkillCard icon={Terminal} name="Bash" colorClass="bg-gray-100 dark:bg-gray-800" iconColor="text-gray-700 dark:text-gray-300" />
-            <SkillCard icon={Box} name="K8s" colorClass="bg-[#326CE5]/5 dark:bg-[#326CE5]/10" iconColor="text-[#326CE5] dark:text-[#326CE5]" />
-            <SkillCard icon={Code} name="C++" colorClass="bg-[#00599C]/5 dark:bg-[#00599C]/10" iconColor="text-[#00599C] dark:text-[#60A5FA]" />
+            <img
+                src={url.includes('/gray') ? url : url + '/gray'}
+                alt={name}
+                className="w-full h-full object-contain filter grayscale-[100%] opacity-40 group-hover:opacity-0 transition-all duration-300"
+            />
         </div>
-    </section>
+        <span className="text-xs font-medium text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors">{name}</span>
+    </div>
 );
+
+const SkillCard = ({ title, items }) => (
+    <div className="bg-white dark:bg-[#202020] border border-gray-200 dark:border-gray-800 p-6 rounded-2xl h-full hover:border-gray-300 dark:hover:border-gray-600 transition-colors">
+        <h3 className="font-semibold text-lg mb-4 text-gray-900 dark:text-white">{title}</h3>
+        <ul className="space-y-2">
+            {items.map((item, idx) => (
+                <li key={idx} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                    {item}
+                </li>
+            ))}
+        </ul>
+    </div>
+);
+
+const SkillsSection = () => {
+    // Conceptual Skills
+    const coreSkills = [
+        {
+            title: "AI Model Optimization",
+            items: ["LLM Quantization (GGUF, 4-bit)", "Fine-Tuning (LoRA/QLoRA)", "Inference Latency Reduction"]
+        },
+        {
+            title: "Architectures & Pipelines",
+            items: ["Agentic RAG Systems", "Semantic Embedding", "FTI Pipeline Architecture", "Vector Search"]
+        },
+        {
+            title: "Data Science & Vision",
+            items: ["Deepfake Detection (CNN+LSTM)", "Biometric Recognition", "Data Preprocessing & Cleaning"]
+        }
+    ];
+
+    // Tools & Technologies (Icons from SimpleIcons.org)
+    // Fixed CSS3 icon URL by removing hex code which might confuse some parsers or using generic slug
+    const tools = [
+        { name: "HTML5", url: "https://cdn.simpleicons.org/html5/gray" },
+        { name: "JavaScript", url: "https://cdn.simpleicons.org/javascript/gray" },
+        { name: "TypeScript", url: "https://cdn.simpleicons.org/typescript/gray" },
+        { name: "React", url: "https://cdn.simpleicons.org/react/gray" },
+        { name: "Expo", url: "https://cdn.simpleicons.org/expo/gray" },
+        { name: "Next.js", url: "https://cdn.simpleicons.org/nextdotjs/gray" },
+        { name: "Node.js", url: "https://cdn.simpleicons.org/nodedotjs/gray" },
+        { name: "Tailwind", url: "https://cdn.simpleicons.org/tailwindcss/gray" },
+        { name: "Python", url: "https://cdn.simpleicons.org/python/gray" },
+        { name: "PyTorch", url: "https://cdn.simpleicons.org/pytorch/gray" },
+        { name: "TensorFlow", url: "https://cdn.simpleicons.org/tensorflow/gray" },
+        { name: "LangChain", url: "https://cdn.simpleicons.org/langchain/gray" },
+        { name: "Firebase", url: "https://cdn.simpleicons.org/firebase/gray" },
+        { name: "Supabase", url: "https://cdn.simpleicons.org/supabase/gray" },
+        { name: "Redis", url: "https://cdn.simpleicons.org/redis/gray" },
+        { name: "Docker", url: "https://cdn.simpleicons.org/docker/gray" },
+        { name: "Git", url: "https://cdn.simpleicons.org/git/gray" },
+        { name: "GitLab", url: "https://cdn.simpleicons.org/gitlab/gray" }
+    ];
+
+    return (
+        <section id="skills" className="mb-32">
+            <h2 className="text-xl font-semibold mb-8 flex items-center gap-2">
+                <Cpu size={20} className="text-gray-400" />
+                Skills & Tools
+            </h2>
+
+            {/* 1. Core Competencies (3 Columns) */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+                {coreSkills.map((skillGroup, idx) => (
+                    <SkillCard key={idx} title={skillGroup.title} items={skillGroup.items} />
+                ))}
+            </div>
+
+            {/* 2. Tools & Technologies (Grid) */}
+            <h3 className="text-lg font-medium mb-6 text-gray-500 dark:text-gray-400"> Technologies</h3>
+            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-9 gap-3">
+                {tools.map(tool => (
+                    <SkillIcon key={tool.name} name={tool.name} url={tool.url} />
+                ))}
+            </div>
+        </section>
+    );
+};
 
 export default SkillsSection;
