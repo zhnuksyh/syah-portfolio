@@ -19,18 +19,18 @@ const AboutSection = () => (
             <div className="grid md:grid-cols-2 gap-12 text-gray-600 dark:text-gray-300 leading-relaxed">
                 <div className="space-y-4">
                     <p>
-                        I am a <strong>Software Engineering student</strong> at <strong>Universiti Teknologi Malaysia</strong>, specializing in <strong>AI and NLP</strong>.
+                        Hi, I’m Zahin Ukasyah. I am an ML/AI Engineer obsessed with optimizing how machines learn and interact.
                     </p>
                     <p>
-                        My passion lies in bridging the gap between theoretical AI models and practical, scalable applications.
+                        Currently, I am applying this passion as an AI/ML Engineer at MIMOS and an ML Research Assistant at UTM, where I dive deep into technical frontiers like Software Design & Architecture, Multi-Agent RAG, Quantization, Vector Embedding, Semantic Search and Fine-Tuning.
                     </p>
                 </div>
                 <div className="space-y-4">
                     <p>
-                        I have a proven ability in <strong>model optimization</strong>, including LLM quantization (GGUF, vLLM) and Agentic RAG pipeline development.
+                        I’m usually building some kind of side project just to test out new ideas. When I'm not coding, I'm probably at the gym, playing chess, or just trying to keep a clear head.
                     </p>
                     <p>
-                        Beyond AI, I have a strong foundation in <strong>scalable full-stack development</strong> (React, Next.js), allowing me to deliver high-performance, integrated intelligent applications.
+                        I am constantly venturing into new side projects to push the boundaries of what I can build. I love connecting with other developers and am open for collaboration on interesting AI challenges & Research Projects.
                     </p>
                 </div>
             </div>

@@ -24,7 +24,7 @@ const ContactSection = () => (
             <div className="mt-8">
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic mb-6">
                     "In chess, as in engineering, the most beautiful moves are often the most quiet ones.
-                    I strive for code that is robust, scalable, and silent. Complexity should be managed, not flaunted."
+                    I strive for code that is elegant. Complexity should be managed, not flaunted."
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                     <div className="h-px bg-gray-300 w-8"></div>

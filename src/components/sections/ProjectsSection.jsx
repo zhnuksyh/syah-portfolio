@@ -3,6 +3,7 @@ import { ArrowRight, ExternalLink, ChevronLeft, ChevronRight, Sparkles } from 'l
 import { Link } from 'react-router-dom';
 import Badge from '../ui/Badge';
 import EmptyState from '../ui/EmptyState';
+import IconRenderer from '../ui/IconRenderer';
 import { PROJECT_DATA } from '../../data/constants';
 
 const ProjectsSection = ({ scrollRef, scroll }) => {
@@ -15,7 +16,7 @@ const ProjectsSection = ({ scrollRef, scroll }) => {
                     <Sparkles size={20} className="text-gray-400" />
                     Featured Projects
                 </h2>
-                <EmptyState message="Projects coming soon..." />
+                <EmptyState message="Coming Soon" />
             </section>
         );
     }
@@ -68,7 +69,7 @@ const ProjectsSection = ({ scrollRef, scroll }) => {
 
                                 {/* Project Icon Overlay */}
                                 <div className="absolute bottom-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-md p-2 rounded-lg text-gray-800 dark:text-gray-200 shadow-sm border border-black/5 dark:border-white/10">
-                                    {project.icon}
+                                    <IconRenderer name={project.icon} size={18} />
                                 </div>
                             </div>
 

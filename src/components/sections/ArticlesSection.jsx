@@ -12,7 +12,7 @@ const ArticlesSection = () => {
                     <FileText size={20} className="text-gray-400" />
                     Articles
                 </h2>
-                <EmptyState message="No articles published yet." />
+                <EmptyState message="Coming Soon" />
             </section>
         );
     }

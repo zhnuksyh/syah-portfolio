@@ -23,6 +23,7 @@ const Navbar = ({ darkMode, setDarkMode, scrollToSection }) => {
                         <button onClick={() => scrollToSection('experience')} className="hover:text-black dark:hover:text-white transition-colors">Experience</button>
                         <button onClick={() => scrollToSection('projects')} className="hover:text-black dark:hover:text-white transition-colors">Projects</button>
                         <button onClick={() => scrollToSection('skills')} className="hover:text-black dark:hover:text-white transition-colors">Skills</button>
+                        <button onClick={() => scrollToSection('articles')} className="hover:text-black dark:hover:text-white transition-colors">Articles</button>
                         <button onClick={() => scrollToSection('collab')} className="hover:text-black dark:hover:text-white transition-colors">Collab</button>
 
                         <button
@@ -71,6 +72,7 @@ const Navbar = ({ darkMode, setDarkMode, scrollToSection }) => {
                         <button onClick={() => { scrollToSection('experience'); setIsMenuOpen(false); }} className="text-left hover:text-black dark:hover:text-white">Experience</button>
                         <button onClick={() => { scrollToSection('projects'); setIsMenuOpen(false); }} className="text-left hover:text-black dark:hover:text-white">Projects</button>
                         <button onClick={() => { scrollToSection('skills'); setIsMenuOpen(false); }} className="text-left hover:text-black dark:hover:text-white">Skills</button>
+                        <button onClick={() => { scrollToSection('articles'); setIsMenuOpen(false); }} className="text-left hover:text-black dark:hover:text-white">Articles</button>
                         <button onClick={() => { scrollToSection('collab'); setIsMenuOpen(false); }} className="text-left hover:text-black dark:hover:text-white">Collab</button>
                         <button onClick={() => { scrollToSection('contact'); setIsMenuOpen(false); }} className="text-left hover:text-black dark:hover:text-white font-semibold">Contact</button>
                     </div>

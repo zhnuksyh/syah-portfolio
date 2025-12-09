@@ -1,0 +1,41 @@
+{
+    "collaborationStatus": "Open to Collaboration",
+    "projects": [],
+    "articles": [],
+    "experience": [
+        {
+            "id": "mimos-intern",
+            "title": "AI/NLP Engineer Intern (R&D)",
+            "organization": "MIMOS Berhad, Strategic Agency under MOSTI",
+            "description": "My work encompasses the full R&D lifecycle, from designing scalable software architecture and analytics dashboards to conducting deep research on model optimization. <br /> <br /> I drive performance improvements through Fine-Tuning and <br /> Multi-Agent RAG strategies, while integrating multimodal capabilities, including Voice (STT/TTS) and Emotion Analysis.",
+            "date": "Date not specified"
+        },
+        {
+            "id": "utm-ra",
+            "title": "Student Research Assistant",
+            "organization": "Universiti Teknologi Malaysia (UTM)",
+            "description": "My work bridged theoretical research and practical efficiency, where I conducted reviews on temporal sequence modeling <br />and automated evaluation scripts to reduce testing time",
+            "date": "Date not specified"
+        }
+    ],
+    "education": [
+        {
+            "id": "bachelor-degree",
+            "title": "Bachelor Degree in Computer Science (Software Engineering) with Hons.",
+            "organization": "Universiti Teknologi Malaysia (UTM)",
+            "date": "2022-2026"
+        },
+        {
+            "id": "foundation-science",
+            "title": "Foundation in Physical Science",
+            "organization": "Universiti Teknologi Malaysia (UTM)",
+            "date": "2021-2022"
+        },
+        {
+            "id": "pure-science",
+            "title": "Pure Science Stream",
+            "organization": "Maahad Muhammadi Lelaki (MML)",
+            "date": "2016-2021"
+        }
+    ]
+}

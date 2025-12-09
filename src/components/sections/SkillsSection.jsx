@@ -40,15 +40,15 @@ const SkillsSection = () => {
     const coreSkills = [
         {
             title: "AI Model Optimization",
-            items: ["LLM Quantization (GGUF, 4-bit)", "Fine-Tuning (LoRA/QLoRA)", "Inference Latency Reduction"]
+            items: ["LLM Quantization Methods (GGUF)", "Efficient Fine-Tuning (LoRA)", "Inference Latency Optimization", "Local Model Deployment"]
         },
         {
             title: "Architectures & Pipelines",
-            items: ["Agentic RAG Systems", "Semantic Embedding", "FTI Pipeline Architecture", "Vector Search"]
+            items: ["Agentic RAG Orchestration", "Semantic Embedding Integration", "Data Pipeline Architecture", "Vector Search Implementation"]
         },
         {
             title: "Data Science & Vision",
-            items: ["Deepfake Detection (CNN+LSTM)", "Biometric Recognition", "Data Preprocessing & Cleaning"]
+            items: ["Deepfake Detection Networks", "Biometric Authentication Systems", "Automated Data Preprocessing", "Computer Vision Analytics"]
         }
     ];
 

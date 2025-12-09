@@ -28,8 +28,8 @@ const Home = ({ darkMode, setDarkMode, scrollToSection }) => {
                 <ExperienceSection />
                 <ProjectsSection scrollRef={scrollRef} scroll={scroll} />
                 <SkillsSection />
-                <CollabSection />
                 <ArticlesSection />
+                <CollabSection />
                 <ContactSection />
 
                 {/* Footer */}
@@ -38,8 +38,8 @@ const Home = ({ darkMode, setDarkMode, scrollToSection }) => {
                         <p>© 2025 Zahin Ukasyah. Kuala Lumpur.</p>
                     </div>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">Resume</a>
-                        <a href="#" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">LinkedIn</a>
+                        <a href="/syah-portfolio/Zahin Ukasyah CV 2025-1.pdf" download className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">CV</a>
+                        <a href="https://linkedin.com/in/zhnuksyh" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">LinkedIn</a>
                         <a href="mailto:zhnuksyh03@gmail.com" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">Email</a>
                     </div>
                 </footer>

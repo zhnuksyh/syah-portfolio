@@ -11,6 +11,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import ArticleDetail from './pages/ArticleDetail';
 import AllProjects from './pages/AllProjects';
 import AllArticles from './pages/AllArticles';
+import Admin from './pages/Admin';
 
 // Wrapper to handle scroll reset and dark mode inheritance
 const AppContent = () => {
@@ -62,6 +63,7 @@ const AppContent = () => {
                 <Route path="/projects" element={<AllProjects />} />
                 <Route path="/article/:id" element={<ArticleDetail />} />
                 <Route path="/articles" element={<AllArticles />} />
+                <Route path="/admin" element={<Admin />} />
             </Routes>
         </div>
     );
