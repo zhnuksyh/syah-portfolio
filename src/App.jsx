@@ -12,6 +12,7 @@ import ArticleDetail from './pages/ArticleDetail';
 import AllProjects from './pages/AllProjects';
 import AllArticles from './pages/AllArticles';
 import Admin from './pages/Admin';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 // Wrapper to handle scroll reset and dark mode inheritance
 const AppContent = () => {
@@ -65,6 +66,7 @@ const AppContent = () => {
                 <Route path="/articles" element={<AllArticles />} />
                 <Route path="/admin" element={<Admin />} />
             </Routes>
+            <ScrollToTop />
         </div>
     );
 };

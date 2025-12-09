@@ -1,10 +1,11 @@
 import React from 'react';
 import { Coffee } from 'lucide-react';
 import { ChessKnight } from '../icons/CustomIcons';
+import SectionWrapper from '../ui/SectionWrapper';
 
 const AboutSection = () => (
     <section id="about" className="mb-32">
-        <div className="bg-white/50 dark:bg-[#202020]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+        <SectionWrapper className="bg-white/50 dark:bg-[#202020]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-2xl p-8 md:p-12 relative overflow-hidden">
 
             {/* Background Icon Watermark */}
             <div className="absolute top-0 right-0 p-8 opacity-5">
@@ -34,7 +35,7 @@ const AboutSection = () => (
                     </p>
                 </div>
             </div>
-        </div>
+        </SectionWrapper>
     </section>
 );
 
