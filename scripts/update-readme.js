@@ -5,37 +5,16 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONFIG_PATH = path.join(__dirname, '../src/data/user_config.jsx');
+const CONFIG_PATH = path.join(__dirname, '../src/data/user_config.json');
 const README_PATH = path.join(__dirname, '../README.md');
-
-function extractData(content, variableName) {
-    const regex = new RegExp(`export const ${variableName} = \\[([\\s\\S]*?)\\];`, 'm');
-    const match = content.match(regex);
-    if (!match) return [];
-
-    // Naive parse of objects in the array string
-    // This assumes specific formatting: { ... }, { ... }
-    const itemsRaw = match[1].split(/},\s*{/);
-
-    return itemsRaw.map(item => {
-        const titleMatch = item.match(/title:\s*"([^"]+)"/);
-        const descMatch = item.match(/desc:\s*"([^"]+)"/);
-        const dateMatch = item.match(/date:\s*"([^"]+)"/);
-
-        return {
-            title: titleMatch ? titleMatch[1] : 'Untitled',
-            desc: descMatch ? descMatch[1] : 'No description',
-            date: dateMatch ? dateMatch[1] : null
-        };
-    }).filter(i => i.title !== 'Untitled'); // Filter out empty parses
-}
 
 try {
     const configContent = fs.readFileSync(CONFIG_PATH, 'utf8');
+    const configData = JSON.parse(configContent);
 
     // Extract Data
-    const projects = extractData(configContent, 'PROJECT_DATA');
-    const articles = extractData(configContent, 'ARTICLE_DATA');
+    const projects = configData.projects || [];
+    const articles = configData.articles || [];
 
     const latestProject = projects[0] || { title: 'None', desc: '' };
     const latestArticle = articles[0] || { title: 'None', desc: '' };
@@ -58,10 +37,10 @@ My work bridges the gap between theoretical AI models and practical, scalable ap
 *Automatic snapshot of what I've been working on.*
 
 ### 🛠️ Latest Project: **${latestProject.title}**
-> ${latestProject.desc}
+> ${latestProject.description || latestProject.desc || 'No description available'}
 
 ### ✍️ Latest Article: **${latestArticle.title}**
-> ${latestArticle.desc}
+> ${latestArticle.description || latestArticle.desc || 'No description available'}
 
 ## 📂 What You'll Find Here
 

@@ -19,7 +19,7 @@ const HeroSection = ({ scrollToSection }) => (
 
             <p className="text-lg leading-relaxed max-w-md text-gray-500 dark:text-gray-400 mb-8">
                 {/* Software Engineering student at UTM. Specializing in <strong className="font-medium text-gray-900 dark:text-gray-100">AI and NLP</strong>, building scalable full-stack applications. */}
-                AI/ML Engineer at MIMOS and former ML Research Assistant at UTM, a Maybank Scholar, a former member of the Student Representative Council, and a former president of the Software Engineering Association UTM.
+                AI/ML Engineer at MIMOS and former ML Research Assistant at UTM, a Maybank Scholar, a former member of the Student Representative Council, and a former President of the Software Engineering Association UTM.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
