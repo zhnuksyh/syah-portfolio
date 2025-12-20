@@ -16,8 +16,8 @@ My work bridges the gap between theoretical AI models and practical, scalable ap
 ### 🛠️ Latest Project: **GitFluent**
 > AI-powered CLI tool that translates natural language into precise, executable Git commands.
 
-### ✍️ Latest Article: **Understanding Attention Mechanisms in Transformers**
-> A deep dive into how self-attention allows models to weigh the importance of different words in a sequence.
+### ✍️ Latest Article: **None**
+> No description available
 
 ## 📂 What You'll Find Here
 
