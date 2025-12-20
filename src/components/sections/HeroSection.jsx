@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import Badge from '../ui/Badge';
-import { XIcon, ChessPawn } from '../icons/CustomIcons';
+import { XIcon, ChessPawn, HuggingFaceIcon } from '../icons/CustomIcons';
 import { COLLABORATION_STATUS } from '../../data/constants';
 import profileImage from '../../assets/profile.jpg';
 
@@ -41,7 +41,7 @@ const HeroSection = ({ scrollToSection }) => (
                 className="text-lg leading-relaxed max-w-md text-gray-500 dark:text-gray-400 mb-8"
             >
                 {/* Software Engineering student at UTM. Specializing in <strong className="font-medium text-gray-900 dark:text-gray-100">AI and NLP</strong>, building scalable full-stack applications. */}
-                AI/ML Engineer at MIMOS and former ML Research Assistant at UTM, a Maybank Scholar, a former member of the Student Representative Council, and a former President of the Software Engineering Association UTM.
+                AI/ML Engineer at MIMOS and former ML Research Assistant at UTM, a Maybank Scholar, a former member of the Student Representative Council, and a former President of Software Engineering Association UTM.
             </motion.p>
 
             <motion.div
@@ -58,6 +58,7 @@ const HeroSection = ({ scrollToSection }) => (
                     {/* Helper function to generate standardized social button classes */}
                     {[
                         { Icon: Github, color: "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white", href: "https://github.com/zhnuksyh" },
+                        { Icon: HuggingFaceIcon, color: "text-gray-600 dark:text-gray-400 hover:text-yellow-500", href: "https://huggingface.co/daimon-ml" },
                         { Icon: Linkedin, color: "text-gray-600 dark:text-gray-400 hover:text-blue-500", href: "https://linkedin.com/in/zhnuksyh" },
                         { Icon: Mail, color: "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white", href: "mailto:zhnuksyh03@gmail.com" },
                     ].map(({ Icon, color, href }, i) => (
@@ -68,7 +69,7 @@ const HeroSection = ({ scrollToSection }) => (
                             rel={href.startsWith('http') ? "noopener noreferrer" : ""}
                             className={`flex items-center justify-center w-11 h-11 transition-colors bg-white dark:bg-[#202020] border border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 rounded-lg ${color}`}
                         >
-                            <Icon size={20} className={i === 3 ? "fill-current" : ""} />
+                            <Icon size={20} />
                         </a>
                     ))}
                 </div>

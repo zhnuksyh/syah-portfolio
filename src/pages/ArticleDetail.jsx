@@ -40,7 +40,11 @@ const ArticleDetail = () => {
             )}
 
             {/* Content Body */}
-            <article className="prose dark:prose-invert max-w-none text-lg text-gray-800 dark:text-gray-200 leading-8">
+            <article className="prose dark:prose-invert max-w-none 
+                prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white 
+                prose-p:text-gray-800 dark:prose-p:text-gray-200 prose-p:leading-relaxed
+                prose-li:text-gray-800 dark:prose-li:text-gray-200
+                prose-a:text-blue-600 dark:prose-a:text-blue-400 font-sans">
                 <div dangerouslySetInnerHTML={{ __html: article.fullContent }} />
             </article>
         </div>

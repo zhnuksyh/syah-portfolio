@@ -39,6 +39,7 @@ const Home = ({ darkMode, setDarkMode, scrollToSection }) => {
                     </div>
                     <div className="flex gap-6">
                         <a href="/syah-portfolio/Zahin Ukasyah CV 2025-1.pdf" download className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">CV</a>
+                        <a href="https://huggingface.co/daimon-ml" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">HuggingFace</a>
                         <a href="https://linkedin.com/in/zhnuksyh" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">LinkedIn</a>
                         <a href="mailto:zhnuksyh03@gmail.com" className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors">Email</a>
                     </div>

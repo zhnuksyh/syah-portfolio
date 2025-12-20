@@ -1,6 +1,57 @@
 {
     "collaborationStatus": "Open to Collaboration",
-    "projects": [],
+    "projects": [
+        {
+            "id": "git-fluent",
+            "title": "GitFluent",
+            "desc": "AI-powered CLI tool that translates natural language into precise, executable Git commands.",
+            "fullContent": "<p class='mb-6'><strong>Gitfluent</strong> is an AI-powered CLI tool that translates natural language into precise, executable Git commands.</p><p class='mb-6'>Built on top of <strong>Meta's Llama-3 (8B)</strong> and fine-tuned with <strong>Unsloth</strong>, it bridges the gap between human intent and technical syntax. Whether you're a beginner afraid of <code>git reset</code> or a senior engineer tired of typing complex interactive rebases, Gitfluent has you covered.</p><h3 class='text-xl font-bold mb-3 mt-8'>Why Gitfluent?</h3><p class='mb-4'>The gap between <em>\"I want to undo my last commit\"</em> and knowing to type <code>git reset --soft HEAD~1</code> is a major friction point for developers.</p><p class='mb-4'>Gitfluent solves this by:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Understanding Intent:</strong> It knows the difference between \"undo\" (soft reset) and \"delete\" (hard reset).</li><li><strong>Chaining Logic:</strong> It can generate multi-step commands (e.g., create a branch -> switch to it -> push upstream) in a single line.</li><li><strong>Handling Context:</strong> It understands complex requests like resolving merge conflicts or cherry-picking specific hashes.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Installation</h3><h4 class='font-bold mb-2'>1. Clone the repository</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>git clone https://github.com/zhnuksyh/gitfluent.git\ncd gitfluent</code></pre><h4 class='font-bold mb-2'>2. Install dependencies</h4><div class='bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500 p-4 mb-6 text-sm'><strong>IMPORTANT:</strong> Requires a GPU-enabled environment or appropriate CPU libraries for quantization support.</div><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>pip install -r requirements.txt</code></pre><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Usage</h3><p class='mb-4'>You can run Gitfluent directly from your terminal using the provided Python wrapper.</p><h4 class='font-bold mb-2'>Basic Syntax</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>python gitfluent.py \"Your natural language request here\"</code></pre><h4 class='font-bold mb-2'>Examples</h4><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Goal</th><th class='py-2 pr-4 font-bold'>Natural Language Input</th><th class='py-2 font-bold'>Generated Command</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Undo a mistake</strong></td><td class='py-2 pr-4'><code>\"Undo my last commit but keep the files staged\"</code></td><td class='py-2'><code>git reset --soft HEAD~1</code></td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Complex Branching</strong></td><td class='py-2 pr-4'><code>\"Create a new branch named feature-login and switch to it\"</code></td><td class='py-2'><code>git checkout -b feature-login</code></td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Merge Conflicts</strong></td><td class='py-2 pr-4'><code>\"Keep the incoming changes for style.css and ignore my local version\"</code></td><td class='py-2'><code>git checkout --theirs style.css && git add style.css</code></td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Model Details</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Architecture:</strong> Llama-3 (8B Parameters)</li><li><strong>Quantization:</strong> 4-bit (via <code>bitsandbytes</code>) for efficient local inference.</li><li><strong>Fine-Tuning Framework:</strong> <a href='https://github.com/unslothai/unsloth' target='_blank' class='text-blue-500 hover:underline'>Unsloth</a> (2x faster training, 0% accuracy loss).</li><li><strong>Dataset:</strong> Custom dataset focusing on version control edge cases, conflict resolution, and colloquial technical requests.</li></ul><p class='mb-6'><strong>Download the Model Weights:</strong> The full model weights are hosted on Hugging Face: <a href='https://huggingface.co/daimon-ml/gitfluent-llama3-8b' target='_blank' class='text-blue-500 hover:underline'>daimon-ml/gitfluent-llama3-8b</a></p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Disclaimer</h3><p class='mb-6'>Gitfluent is a generative AI model. While it is fine-tuned for high accuracy, it can occasionally hallucinate or output incorrect commands.</p><p class='mb-6'><strong>Always review the command before executing it</strong>, especially destructive commands like <code>reset --hard</code> or <code>clean -f</code>. Use at your own risk.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Contributing</h3><p class='mb-6'>Contributions are welcome! If you find a Git command the model struggles with, feel free to open an issue or submit a PR with new training examples.</p><h3 class='text-xl font-bold mb-3 mt-8'>License</h3><p class='mb-6'>This project is licensed under the <strong>Apache 2.0 License</strong>.</p>",
+            "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1200&auto=format&fit=crop",
+            "tags": [
+                {
+                    "name": "Python",
+                    "color": "blue"
+                },
+                {
+                    "name": "Llama-3",
+                    "color": "purple"
+                },
+                {
+                    "name": "Unsloth",
+                    "color": "green"
+                },
+                {
+                    "name": "CLI",
+                    "color": "gray"
+                }
+            ],
+            "icon": "Terminal",
+            "link": "https://github.com/zhnuksyh/git-fluent"
+        },
+        {
+            "id": "interact",
+            "title": "Interact",
+            "desc": "Interactive educational tool for visualizing various Machine Learning concepts.",
+            "fullContent": "<p class='mb-6'><strong>ML Interact</strong> is an interactive educational tool for visualizing various Machine Learning concepts. This project aims to provide an intuitive and hands-on way to understand the building blocks of modern AI systems.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/ml-interact/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/ml-interact/</a></p><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><p class='mb-4'>The application is broken down into several interactive modules, each focusing on a specific concept:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Chunking:</strong> Visualize how text is split into smaller pieces for processing.</li><li><strong>Embeddings:</strong> Explore how text is converted into vector representations.</li><li><strong>Vector Search (RAG):</strong> Understand Retrieval-Augmented Generation through vector similarity search.</li><li><strong>Quantization:</strong> See the effects of reducing model precision.</li><li><strong>Full Pipeline:</strong> visualize the end-to-end flow of an LLM application.</li><li><strong>LLM Basics:</strong> Learn about the fundamental components of Large Language Models.</li><li><strong>Inference:</strong> Interact with model inference steps.</li><li><strong>Vision / OCR:</strong> Explore Optical Character Recognition and vision capabilities.</li><li><strong>MCP / Tools:</strong> a section for Model Context Protocol and external tools.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Framework:</strong> <a href='https://react.dev/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>React</a></li><li><strong>Build Tool:</strong> <a href='https://vitejs.dev/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Vite</a></li><li><strong>Styling:</strong> <a href='https://tailwindcss.com/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Tailwind CSS</a></li><li><strong>Icons:</strong> <a href='https://lucide.dev/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Lucide React</a></li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Getting Started</h3><p class='mb-4'>To run this project locally, follow these steps:</p><h4 class='font-bold mb-2'>1. Install dependencies</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>npm install</code></pre><h4 class='font-bold mb-2'>2. Start the development server</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>npm run dev</code></pre><h4 class='font-bold mb-2'>3. Open in browser</h4><p class='mb-6'>Open your browser and navigate to the URL shown in the terminal (usually <code>http://localhost:5173</code>).</p>",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+            "tags": [
+                {
+                    "name": "React",
+                    "color": "blue"
+                },
+                {
+                    "name": "Visualization",
+                    "color": "orange"
+                },
+                {
+                    "name": "Education",
+                    "color": "green"
+                }
+            ],
+            "icon": "ScatterPlot",
+            "link": "https://zhnuksyh.github.io/ml-interact/"
+        }
+    ],
     "articles": [],
     "experience": [
         {

@@ -33,6 +33,8 @@ const ArticlesSection = () => {
                     <Link
                         to={`/article/${article.id}`}
                         key={article.id}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group bg-white dark:bg-[#202020] p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-colors block"
                     >
                         <div className="flex justify-between items-start mb-3">

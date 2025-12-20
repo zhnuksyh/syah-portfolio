@@ -73,7 +73,7 @@ const AppContent = () => {
 
 export default function App() {
     return (
-        <Router basename="/syah-portfolio">
+        <Router basename={import.meta.env.BASE_URL}>
             <AppContent />
         </Router>
     );

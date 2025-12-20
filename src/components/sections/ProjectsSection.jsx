@@ -65,6 +65,8 @@ const ProjectsSection = ({ scrollRef, scroll }) => {
                             <Link
                                 to={`/project/${project.id}`}
                                 key={idx}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="snap-start flex-none w-[340px] group bg-white dark:bg-[#202020] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden hover:shadow-2xl dark:hover:shadow-black/50 transition-all duration-300 block cursor-pointer"
                             >
                                 {/* Project Image */}
