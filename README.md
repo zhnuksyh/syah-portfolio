@@ -1,5 +1,5 @@
 # Zahin Ukasyah - Portfolio & Blog
-> **Last Updated:** December 20, 2025
+> **Last Updated:** December 27, 2025
 
 ## 👋 About Me
 I am a **Software Engineering student** at **Universiti Teknologi Malaysia**, specializing in **Artificial Intelligence** and **Natural Language Processing (NLP)**. 
@@ -16,8 +16,8 @@ My work bridges the gap between theoretical AI models and practical, scalable ap
 ### 🛠️ Latest Project: **GitFluent**
 > AI-powered CLI tool that translates natural language into precise, executable Git commands.
 
-### ✍️ Latest Article: **None**
-> No description available
+### ✍️ Latest Article: **My Journey into AI Engineering: 4 Books Helping Me Bridge the Gap**
+> Moving from tutorials to real-world AI engineering is a steep learning curve. Here are 4 books that helped me bridge the gap between coding and building useful solutions.
 
 ## 📂 What You'll Find Here
 
