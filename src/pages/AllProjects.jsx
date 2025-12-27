@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import Badge from '../components/ui/Badge';
+import IconRenderer from '../components/ui/IconRenderer';
 import { PROJECT_DATA } from '../data/constants';
 
 const AllProjects = () => {
@@ -31,7 +32,7 @@ const AllProjects = () => {
                         <div className="relative h-48 w-full overflow-hidden shrink-0">
                             <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             <div className="absolute bottom-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-md p-2 rounded-lg text-gray-800 dark:text-gray-200 shadow-sm border border-black/5 dark:border-white/10">
-                                {project.icon}
+                                <IconRenderer name={project.icon} size={18} />
                             </div>
                         </div>
 

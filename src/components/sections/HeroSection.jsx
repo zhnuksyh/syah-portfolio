@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, GraduationCap, Smile } from 'lucide-react';
 import Badge from '../ui/Badge';
-import { XIcon, ChessPawn, HuggingFaceIcon } from '../icons/CustomIcons';
+import { XIcon, ChessPawn } from '../icons/CustomIcons';
 import { COLLABORATION_STATUS } from '../../data/constants';
 import profileImage from '../../assets/profile.jpg';
 
@@ -58,7 +58,8 @@ const HeroSection = ({ scrollToSection }) => (
                     {/* Helper function to generate standardized social button classes */}
                     {[
                         { Icon: Github, color: "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white", href: "https://github.com/zhnuksyh" },
-                        { Icon: HuggingFaceIcon, color: "text-gray-600 dark:text-gray-400 hover:text-yellow-500", href: "https://huggingface.co/daimon-ml" },
+                        { Icon: Smile, color: "text-gray-600 dark:text-gray-400 hover:text-yellow-500", href: "https://huggingface.co/daimon-ml" },
+                        { Icon: GraduationCap, color: "text-gray-600 dark:text-gray-400 hover:text-red-700", href: "https://teknologimalaysia.academia.edu/ZahinUkasyah" },
                         { Icon: Linkedin, color: "text-gray-600 dark:text-gray-400 hover:text-blue-500", href: "https://linkedin.com/in/zhnuksyh" },
                         { Icon: Mail, color: "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white", href: "mailto:zhnuksyh03@gmail.com" },
                     ].map(({ Icon, color, href }, i) => (

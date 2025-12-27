@@ -73,11 +73,35 @@ export const HuggingFaceIcon = ({ size = 24, className }) => (
         viewBox="0 0 24 24"
         width={size}
         height={size}
-        fill="currentColor"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className={className}
         xmlns="http://www.w3.org/2000/svg"
     >
-        <path d="M2.5 12a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0Z" opacity=".2" />
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2ZM9 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm10 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM9 15c0-1 1.5-2 3-2s3 1 3 2H9Zm3 4c-3 0-5.5-2-6.5-6h13c-1 4-3.5 6-6.5 6Z" />
+    </svg>
+);
+
+/**
+ * AcademiaIcon
+ * Outline style to match Lucide icons
+ */
+export const AcademiaIcon = ({ size = 24, className }) => (
+    <svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M12.015 15.684l-3.327-1.488-.002-3.21 3.329 1.487 3.328-1.487.001 3.21-3.329 1.488zM12.008 19.336l-7.986-3.57V8.23l7.986 3.57 7.987-3.57v7.535l-7.987 3.571zm-.006-15.65L2.316 6.845 12 11.232l9.682-4.387-9.674-4.391z" />
     </svg>
 );

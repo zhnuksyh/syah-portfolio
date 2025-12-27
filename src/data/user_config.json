@@ -4,25 +4,26 @@
         {
             "id": "git-fluent",
             "title": "GitFluent",
+            "status": "Completed",
             "desc": "AI-powered CLI tool that translates natural language into precise, executable Git commands.",
             "fullContent": "<p class='mb-6'><strong>Gitfluent</strong> is an AI-powered CLI tool that translates natural language into precise, executable Git commands.</p><p class='mb-6'>Built on top of <strong>Meta's Llama-3 (8B)</strong> and fine-tuned with <strong>Unsloth</strong>, it bridges the gap between human intent and technical syntax. Whether you're a beginner afraid of <code>git reset</code> or a senior engineer tired of typing complex interactive rebases, Gitfluent has you covered.</p><h3 class='text-xl font-bold mb-3 mt-8'>Why Gitfluent?</h3><p class='mb-4'>The gap between <em>\"I want to undo my last commit\"</em> and knowing to type <code>git reset --soft HEAD~1</code> is a major friction point for developers.</p><p class='mb-4'>Gitfluent solves this by:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Understanding Intent:</strong> It knows the difference between \"undo\" (soft reset) and \"delete\" (hard reset).</li><li><strong>Chaining Logic:</strong> It can generate multi-step commands (e.g., create a branch -> switch to it -> push upstream) in a single line.</li><li><strong>Handling Context:</strong> It understands complex requests like resolving merge conflicts or cherry-picking specific hashes.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Installation</h3><h4 class='font-bold mb-2'>1. Clone the repository</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>git clone https://github.com/zhnuksyh/gitfluent.git\ncd gitfluent</code></pre><h4 class='font-bold mb-2'>2. Install dependencies</h4><div class='bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500 p-4 mb-6 text-sm'><strong>IMPORTANT:</strong> Requires a GPU-enabled environment or appropriate CPU libraries for quantization support.</div><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>pip install -r requirements.txt</code></pre><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Usage</h3><p class='mb-4'>You can run Gitfluent directly from your terminal using the provided Python wrapper.</p><h4 class='font-bold mb-2'>Basic Syntax</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>python gitfluent.py \"Your natural language request here\"</code></pre><h4 class='font-bold mb-2'>Examples</h4><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Goal</th><th class='py-2 pr-4 font-bold'>Natural Language Input</th><th class='py-2 font-bold'>Generated Command</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Undo a mistake</strong></td><td class='py-2 pr-4'><code>\"Undo my last commit but keep the files staged\"</code></td><td class='py-2'><code>git reset --soft HEAD~1</code></td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Complex Branching</strong></td><td class='py-2 pr-4'><code>\"Create a new branch named feature-login and switch to it\"</code></td><td class='py-2'><code>git checkout -b feature-login</code></td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Merge Conflicts</strong></td><td class='py-2 pr-4'><code>\"Keep the incoming changes for style.css and ignore my local version\"</code></td><td class='py-2'><code>git checkout --theirs style.css && git add style.css</code></td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Model Details</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Architecture:</strong> Llama-3 (8B Parameters)</li><li><strong>Quantization:</strong> 4-bit (via <code>bitsandbytes</code>) for efficient local inference.</li><li><strong>Fine-Tuning Framework:</strong> <a href='https://github.com/unslothai/unsloth' target='_blank' class='text-blue-500 hover:underline'>Unsloth</a> (2x faster training, 0% accuracy loss).</li><li><strong>Dataset:</strong> Custom dataset focusing on version control edge cases, conflict resolution, and colloquial technical requests.</li></ul><p class='mb-6'><strong>Download the Model Weights:</strong> The full model weights are hosted on Hugging Face: <a href='https://huggingface.co/daimon-ml/gitfluent-llama3-8b' target='_blank' class='text-blue-500 hover:underline'>daimon-ml/gitfluent-llama3-8b</a></p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Disclaimer</h3><p class='mb-6'>Gitfluent is a generative AI model. While it is fine-tuned for high accuracy, it can occasionally hallucinate or output incorrect commands.</p><p class='mb-6'><strong>Always review the command before executing it</strong>, especially destructive commands like <code>reset --hard</code> or <code>clean -f</code>. Use at your own risk.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Contributing</h3><p class='mb-6'>Contributions are welcome! If you find a Git command the model struggles with, feel free to open an issue or submit a PR with new training examples.</p><h3 class='text-xl font-bold mb-3 mt-8'>License</h3><p class='mb-6'>This project is licensed under the <strong>Apache 2.0 License</strong>.</p>",
             "image": "projects/gitfluent-thumb.png",
             "tags": [
                 {
-                    "name": "Python",
+                    "name": "ML",
                     "color": "blue"
-                },
-                {
-                    "name": "Llama-3",
-                    "color": "purple"
                 },
                 {
                     "name": "Unsloth",
                     "color": "green"
                 },
                 {
-                    "name": "CLI",
-                    "color": "gray"
+                    "name": "Llama",
+                    "color": "purple"
+                },
+                {
+                    "name": "LoRA",
+                    "color": "orange"
                 }
             ],
             "icon": "Terminal",
@@ -31,28 +32,123 @@
         {
             "id": "interact",
             "title": "Interact",
+            "status": "Completed",
             "desc": "Interactive educational tool for visualizing various Machine Learning concepts.",
             "fullContent": "<p class='mb-6'><strong>ML Interact</strong> is an interactive educational tool for visualizing various Machine Learning concepts. This project aims to provide an intuitive and hands-on way to understand the building blocks of modern AI systems.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/ml-interact/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/ml-interact/</a></p><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><p class='mb-4'>The application is broken down into several interactive modules, each focusing on a specific concept:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Chunking:</strong> Visualize how text is split into smaller pieces for processing.</li><li><strong>Embeddings:</strong> Explore how text is converted into vector representations.</li><li><strong>Vector Search (RAG):</strong> Understand Retrieval-Augmented Generation through vector similarity search.</li><li><strong>Quantization:</strong> See the effects of reducing model precision.</li><li><strong>Full Pipeline:</strong> visualize the end-to-end flow of an LLM application.</li><li><strong>LLM Basics:</strong> Learn about the fundamental components of Large Language Models.</li><li><strong>Inference:</strong> Interact with model inference steps.</li><li><strong>Vision / OCR:</strong> Explore Optical Character Recognition and vision capabilities.</li><li><strong>MCP / Tools:</strong> a section for Model Context Protocol and external tools.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Framework:</strong> <a href='https://react.dev/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>React</a></li><li><strong>Build Tool:</strong> <a href='https://vitejs.dev/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Vite</a></li><li><strong>Styling:</strong> <a href='https://tailwindcss.com/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Tailwind CSS</a></li><li><strong>Icons:</strong> <a href='https://lucide.dev/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Lucide React</a></li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Getting Started</h3><p class='mb-4'>To run this project locally, follow these steps:</p><h4 class='font-bold mb-2'>1. Install dependencies</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>npm install</code></pre><h4 class='font-bold mb-2'>2. Start the development server</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto'><code>npm run dev</code></pre><h4 class='font-bold mb-2'>3. Open in browser</h4><p class='mb-6'>Open your browser and navigate to the URL shown in the terminal (usually <code>http://localhost:5173</code>).</p>",
             "image": "projects/interact-thumb.png",
             "tags": [
                 {
-                    "name": "React",
+                    "name": "ML",
                     "color": "blue"
-                },
-                {
-                    "name": "Visualization",
-                    "color": "orange"
                 },
                 {
                     "name": "Education",
                     "color": "green"
+                },
+                {
+                    "name": "Interactive",
+                    "color": "purple"
                 }
             ],
             "icon": "ScatterPlot",
             "link": "https://zhnuksyh.github.io/ml-interact/"
+        },
+        {
+            "id": "wild-breakout",
+            "title": "Wild Breakout",
+            "status": "In-Progress",
+            "desc": "An engaging 2D puzzle-platformer escape room featuring animals and a light-hearted story.",
+            "fullContent": "<p class='mb-6'><strong>Wild Breakout</strong> is a 2D puzzle-platformer that combines escape room mechanics with a light-hearted narrative. Players guide various animals through complex levels, solving environmental puzzles to escape captivity.</p><p class='mb-6'>The game features unique character abilities, tight platforming controls, and a charming pixel art aesthetic.</p><h3 class='text-xl font-bold mb-3 mt-8'>Key Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Puzzle-Platforming:</strong> Solve logic puzzles while navigating platforming challenges.</li><li><strong>Animal Protagonists:</strong> Play as different animals, each with unique abilities required to progress.</li><li><strong>Story-Driven:</strong> Uncover the story behind the animals' capture and their journey to freedom.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Engine:</strong> <a href='https://godotengine.org/' target='_blank' class='text-blue-500 hover:underline'>Godot Game Engine</a></li><li><strong>Language:</strong> GDScript</li><li><strong>Art Design:</strong> Libresprite</li></ul>",
+            "image": "projects/wild-breakout-thumb.png",
+            "tags": [
+                {
+                    "name": "Godot",
+                    "color": "blue"
+                },
+                {
+                    "name": "GDScript",
+                    "color": "green"
+                },
+                {
+                    "name": "Puzzle",
+                    "color": "purple"
+                },
+                {
+                    "name": "2D Art",
+                    "color": "orange"
+                }
+            ],
+            "icon": "Gamepad2",
+            "link": "#"
+        },
+        {
+            "id": "project-orion",
+            "title": "Project Orion",
+            "status": "In-Progress",
+            "desc": "Optical-Radar Integration for Observation & Nowcasting",
+            "fullContent": "<p class='mb-6'><strong>Project Orion</strong> (Optical-Radar Integration for Observation & Nowcasting) is a research initiative optimizing clean water supply in South Africa.</p><p class='mb-6'>Developed for the <strong>EY Open Science Data Challenge 2026</strong>, this project leverages satellite imagery and environmental data to forecast key water quality parameters in inland water bodies, aiming to support public health and sustainability efforts.</p><h3 class='text-xl font-bold mb-3 mt-8'>Project Goals</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Predictive Modeling:</strong> Forecast alkalinity, salinity, and phosphorus levels.</li><li><strong>Data Integration:</strong> Combine satellite imagery, weather patterns, and ground-level sensor data.</li><li><strong>Impact:</strong> Provide actionable insights for water management authorities in South Africa.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Methodology</h3><p class='mb-4'>The solution utilizes advanced machine learning techniques to analyze multi-modal data sources.</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Data Sources:</strong> Sentinel-2 satellite data, local weather station feeds.</li><li><strong>Techniques:</strong> Convolutional Neural Networks (CNNs) for image analysis, Time-series forecasting.</li></ul><p class='mb-6'>For more information on the challenge, visit: <a href='https://challenge.ey.com/' target='_blank' class='text-blue-500 hover:underline'>EY Open Science Data Challenge</a></p>",
+            "image": "projects/clean-water-thumb.png",
+            "tags": [
+                {
+                    "name": "ML",
+                    "color": "blue"
+                },
+                {
+                    "name": "CNN",
+                    "color": "green"
+                },
+                {
+                    "name": "LSTM",
+                    "color": "purple"
+                },
+                {
+                    "name": "SAR",
+                    "color": "orange"
+                }
+            ],
+            "icon": "Droplets",
+            "link": "https://challenge.ey.com/"
+        },
+        {
+            "id": "project-ibra",
+            "title": "Project IBRA",
+            "status": "In-Progress",
+            "desc": "IRIS Biometric Recognition with ArcFace loss (UTM FYP).",
+            "fullContent": "<p class='mb-6'><strong>Project IBRA</strong> focuses on IRIS Biometric Recognition using the ArcFace loss function to enhance identification accuracy.</p><p class='mb-6'>This project served as my Final Year Project (FYP) at <strong>Universiti Teknologi Malaysia (UTM)</strong>. It investigates the application of Deep Learning, specifically Convolutional Neural Networks (CNNs), integrated with ArcFace loss to improve the discriminatory power of iris feature embeddings.</p><h3 class='text-xl font-bold mb-3 mt-8'>Key Objectives</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Enhanced Accuracy:</strong> Levaraging ArcFace to maximize class separability in feature space.</li><li><strong>Biometric Security:</strong> Developing robust recognition systems against spoofing attacks.</li><li><strong>Research:</strong> Comparative analysis against traditional loss functions.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'> Technologies</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Core:</strong> Machine Learning (CNN)</li><li><strong>Loss Architecture:</strong> ArcFace (Additive Angular Margin Loss)</li></ul>",
+            "image": "projects/ibra-thumb.png",
+            "tags": [
+                {
+                    "name": "ML",
+                    "color": "blue"
+                },
+                {
+                    "name": "CNN",
+                    "color": "green"
+                },
+                {
+                    "name": "ArcFace",
+                    "color": "purple"
+                },
+                {
+                    "name": "Research",
+                    "color": "orange"
+                }
+            ],
+            "icon": "ScanEye",
+            "link": "#"
         }
     ],
-    "articles": [],
+    "articles": [
+        {
+            "id": "journey-into-ai-engineering",
+            "title": "My Journey into AI Engineering: 4 Books Helping Me Bridge the Gap",
+            "desc": "Moving from tutorials to real-world AI engineering is a steep learning curve. Here are 4 books that helped me bridge the gap between coding and building useful solutions.",
+            "date": "December 27, 2025",
+            "readTime": "5 min read",
+            "image": "",
+            "fullContent": "<p class='mb-4'>I think we’ve all been there haha. You finish a machine learning tutorial, get that green checkmark, and feel like a genius. But then you start your first real internship (like I did recently at MIMOS), and suddenly, things get messy haha.</p><p class='mb-4'>Real-world data isn't clean. Models hallucinate when you least expect it. And trying to deploy something that actual humans can use? That’s a whole different ball game compared to submitting an assignment on GitHub.</p><p class='mb-4'>I’ve been trying to figure out how to move from just coding to actually building—creating scalable useful solutions that solve real problems. It’s been a steep learning curve, but I’ve found some resources that really helped the lightbulbs go on for me.</p><p class='mb-8'>To be clear, I’m not a pro yet. I’m just another traveller on the same path as you, trying to figure this stuff out. I wanted to share the resources that are lighting the way for me, so we can move forward better together.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>1. The LLM Engineer’s Handbook by Maxime Labonne & Paul Iusztin</h3><p class='mb-2'><strong>Best For:</strong> Getting your hands dirty and building things from scratch.</p><p class='mb-4'>If you’re on AI Twitter/X, you’ve probably seen Maxime’s amazing graphs. I picked this up because I wanted to understand what happens under the hood of the tools we use every day.</p><p class='mb-2'><strong>Why I Love It:</strong><br/>Most uni courses stop at \"here is how to train a model.\" This book picks up right where they leave off. It walks you through the whole messy lifecycle of data prep, fine-tuning techniques (like QLoRA, which is super cool), and actually deploying on AWS.</p><p class='mb-8'><strong>My \"Aha!\" Moment:</strong><br/>I realized that if I want to build my own product one day, I can't just rely on expensive APIs forever. This book gave me the confidence to try hosting open-source models myself. It makes the scary infrastructure stuff feel manageable.</p><h3 class='text-xl font-bold mb-3 mt-8'>2. Building LLMs for Production by Louis-François Bouchard & Louie Peters</h3><p class='mb-2'><strong>Best For:</strong> When you’re tired of your AI making things up haha.</p><p class='mb-4'>You know that feeling when your chatbot works perfectly for you, but then breaks the second you show it to your boss? Yeah, that. This book is all about fixing that reliability gap.</p><p class='mb-2'><strong>Why I Love It:</strong><br/>Since I’m working on a mental health chatbot right now, reliability is huge for me. You can't have a therapist bot hallucinating! This book is a goldmine for Retrieval-Augmented Generation (RAG). It basically teaches you how to give your AI a textbook so it doesn't just guess answers.</p><p class='mb-8'><strong>My \"Aha!\" Moment:</strong><br/>Prompt engineering is called engineering for a reason haha. This book taught me how to structure prompts systematically so the results are consistent, not just lucky.</p><h3 class='text-xl font-bold mb-3 mt-8'>3. Designing Machine Learning Systems by Chip Huyen</h3><p class='mb-2'><strong>Best For:</strong> Seeing the big picture (and saving yourself headaches later).</p><p class='mb-4'>This one is a classic for a reason. If the other books are about how to build, this one is about what to build and why.</p><p class='mb-2'><strong>Why I Love It:</strong><br/>Chip Huyen explains that a 99% accurate model is useless if it costs a fortune to run or takes ten seconds to reply. It helped me shift my focus from just chasing high accuracy scores to thinking about the user experience and business value.</p><p class='mb-8'><strong>My \"Aha!\" Moment:</strong><br/>It taught me to ask: \"Do we even need ML for this?\" sometimes the best engineering solution is the simplest one. It’s a great reality check for us students who want to use AI for everything.</p><h3 class='text-xl font-bold mb-3 mt-8'>4. AI Engineering by Chip Huyen</h3><p class='mb-2'><strong>Best For:</strong> Understanding where our industry is going next.</p><p class='mb-4'>Think of this as the modern update to the previous book. The industry is moving so fast, and the role of \"Machine Learning Engineer\" is evolving into \"AI Engineer.\"</p><p class='mb-2'><strong>Why I Love It:</strong><br/>This feels like a peek into the future of our degree. It’s all about \"Foundation Models\"—using pre-trained giants to build products faster. It covers the new tech stack we’re all hearing about, like vector stores and LangChain.</p><p class='mb-8'><strong>My \"Aha!\" Moment:</strong><br/>We don't always have to reinvent the wheel! This book showed me the power of \"composite AI systems\", which chaining together existing powerful tools to build something cool and new.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Summary: What Should You Read?</h3><p class='mb-4'>If you're wondering where to start, here is how I break it down:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Want to build & deploy open-source models?</strong> Grab The LLM Engineer’s Handbook.</li><li><strong>Struggling with hallucinations/RAG?</strong> Building LLMs for Production is your friend.</li><li><strong>Want to design better systems overall?</strong> Designing Machine Learning Systems is essential.</li><li><strong>Curious about the modern AI stack?</strong> Check out AI Engineering.</li></ul><h3 class='text-xl font-bold mb-3 mt-8'>Let's Learn Together</h3><p class='mb-4'>Transitioning from university to the industry is tough, and imposter syndrome is real. But books like these make the journey a lot less lonely.</p><p class='mb-4'>Honestly, I’m still figuring all of this out myself. I’m sharing this list not because I have all the answers, but because I know how hard it can be to find the right map.</p><p class='mb-4'>I’m learning something new every day, so I’d genuinely love to hear from you. Have you read any of these? Or do you have any other recommendations for a junior engineer like me?</p>"
+        }
+    ],
     "experience": [
         {
             "id": "mimos-intern",

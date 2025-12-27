@@ -81,8 +81,18 @@ const ProjectsSection = ({ scrollRef, scroll }) => {
 
                                 <div className="p-6">
                                     <div className="flex justify-between items-start mb-3">
-                                        <h3 className="font-semibold text-lg">{project.title}</h3>
-                                        <ExternalLink size={16} className="text-gray-300 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
+                                        <div className="flex flex-row items-center gap-2">
+                                            <h3 className="font-semibold text-lg">{project.title}</h3>
+                                            {project.status && (
+                                                <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full w-fit ${project.status === 'Completed'
+                                                    ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                                                    : 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                                                    }`}>
+                                                    {project.status}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <ExternalLink size={16} className="text-gray-300 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors shrink-0 mt-1" />
                                     </div>
 
                                     <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 h-12 line-clamp-2">

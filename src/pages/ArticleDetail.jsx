@@ -47,6 +47,21 @@ const ArticleDetail = () => {
                 prose-a:text-blue-600 dark:prose-a:text-blue-400 font-sans">
                 <div dangerouslySetInnerHTML={{ __html: article.fullContent }} />
             </article>
+
+            <hr className="my-12 border-gray-200 dark:border-gray-800" />
+
+            <div className="bg-gray-50 dark:bg-[#1a1a1a] rounded-xl p-8 text-center">
+                <h3 className="font-semibold mb-2">Enjoyed this read?</h3>
+                <p className="text-sm text-gray-500 mb-4">I'm always open to chatting about AI, engineering, or new opportunities.</p>
+                <div className="flex justify-center gap-4">
+                    <Link to="/articles" className="inline-block px-6 py-2 bg-blue-600 text-white rounded-full font-medium text-sm hover:bg-blue-700 transition-colors">
+                        More Articles
+                    </Link>
+                    <a href="mailto:zhnuksyh03@gmail.com" className="inline-block px-6 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium text-sm">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
         </div>
     );
 };
