@@ -1,5 +1,5 @@
 # Zahin Ukasyah - Portfolio & Blog
-> **Last Updated:** December 27, 2025
+> **Last Updated:** December 30, 2025
 
 ## 👋 About Me
 I am a **Software Engineering student** at **Universiti Teknologi Malaysia**, specializing in **Artificial Intelligence** and **Natural Language Processing (NLP)**. 
@@ -16,8 +16,8 @@ My work bridges the gap between theoretical AI models and practical, scalable ap
 ### 🛠️ Latest Project: **Ditto! Memory Game**
 > A beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.
 
-### ✍️ Latest Article: **My Journey into AI Engineering: 4 Books Helping Me Bridge the Gap**
-> Moving from tutorials to real-world AI engineering is a steep learning curve. Here are 4 books that helped me bridge the gap between coding and building useful solutions.
+### ✍️ Latest Article: **How I Shared My First Mobile (Web) Game with Friends (without the App Store)**
+> I finally finished building my first mobile game, Ditto!, but hit a snag with App Store fees. Here is how I used Progressive Web Apps (PWA) to share it for free and give it a native feel.
 
 ## 📂 What You'll Find Here
 
