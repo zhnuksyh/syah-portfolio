@@ -13,8 +13,8 @@ My work bridges the gap between theoretical AI models and practical, scalable ap
 ## 🌟 Latest Updates
 *Automatic snapshot of what I've been working on.*
 
-### 🛠️ Latest Project: **GitFluent**
-> AI-powered CLI tool that translates natural language into precise, executable Git commands.
+### 🛠️ Latest Project: **Ditto! Memory Game**
+> A beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.
 
 ### ✍️ Latest Article: **My Journey into AI Engineering: 4 Books Helping Me Bridge the Gap**
 > Moving from tutorials to real-world AI engineering is a steep learning curve. Here are 4 books that helped me bridge the gap between coding and building useful solutions.
