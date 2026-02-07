@@ -61,7 +61,7 @@ const ProjectsSection = ({ scrollRef, scroll }) => {
                         className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
-                        {PROJECT_DATA.map((project, idx) => (
+                        {PROJECT_DATA.slice(0, 5).map((project, idx) => (
                             <Link
                                 to={`/project/${project.id}`}
                                 key={idx}
