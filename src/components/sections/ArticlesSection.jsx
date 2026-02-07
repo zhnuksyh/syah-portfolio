@@ -29,7 +29,7 @@ const ArticlesSection = () => {
                 </Link>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-                {ARTICLE_DATA.map((article) => (
+                {ARTICLE_DATA.slice(0, 6).map((article) => (
                     <Link
                         to={`/article/${article.id}`}
                         key={article.id}

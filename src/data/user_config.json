@@ -2,6 +2,90 @@
     "collaborationStatus": "Open to Collaboration",
     "projects": [
         {
+            "id": "personaplex-sts",
+            "title": "PersonaPlex Full-Duplex STS",
+            "status": "Completed",
+            "desc": "Experiment: Testing NVIDIA's PersonaPlex-7B full-duplex Speech-to-Speech model with ~170ms latency and native turn-taking.",
+            "fullContent": "<div class='bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 mb-6 text-sm'><strong>Note:</strong> This is an experiment to test and explore <strong>NVIDIA's PersonaPlex</strong> model. All model development and research credit goes to <strong>NVIDIA</strong> and <strong>Kyutai</strong> (Moshi architecture). I set up this environment to understand and evaluate the capabilities of full-duplex Speech-to-Speech systems.</div><p class='mb-6'><strong>PersonaPlex</strong> is NVIDIA's breakthrough real-time, full-duplex Speech-to-Speech conversational AI platform. Unlike traditional voice assistants that wait for you to finish speaking, PersonaPlex can listen and respond simultaneously, just like a real human conversation.</p><h3 class='text-xl font-bold mb-3 mt-8'>Why This Experiment?</h3><p class='mb-6'>I wanted to understand how modern Speech-to-Speech (STS) models work without the traditional ASR -> LLM -> TTS pipeline. PersonaPlex processes audio directly, which enables ultra-low latency and natural turn-taking.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Key Features (NVIDIA)</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Feature</th><th class='py-2 font-bold'>Description</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Ultra-Low Latency</strong></td><td class='py-2'>~170ms response time for real-time conversations</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Full-Duplex</strong></td><td class='py-2'>Model listens while speaking and handles interruptions naturally</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>18 Voice Options</strong></td><td class='py-2'>Natural (NATF/NATM) and Variety (VARF/VARM) voices</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Dynamic Personas</strong></td><td class='py-2'>Text-based role prompts following NVIDIA's format</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Voice Previews</strong></td><td class='py-2'>Pre-generated samples for each voice option</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Architecture Overview</h3><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto text-sm'><code>+------------+    +------------+    +------------+\n|  Frontend  |<-->|  Backend   |<-->| PersonaPlex|\n| (React/TS) |WSS | (FastAPI)  |    |  -7B Model |\n+------------+    +------------+    +------------+</code></pre><h4 class='font-bold mb-2'>Neural Audio Codec: Mimi</h4><ul class='list-disc list-outside pl-5 space-y-2 mb-6'><li>Compresses 24kHz audio into discrete tokens at <strong>12.5 Hz</strong></li><li>Uses <strong>8 parallel codebooks</strong> for high-fidelity reconstruction</li><li>Enables direct audio-to-audio processing without text intermediary</li></ul><h4 class='font-bold mb-2'>Language Model: PersonaPlex-7B</h4><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li>Full-duplex conversational model (listens while speaking)</li><li>Trained on synthetic conversations + Fisher corpus</li><li>Supports voice prompts (timbre) and text prompts (persona)</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>My Setup</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Component</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>React, TypeScript, WebSocket (WSS)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Backend</strong></td><td class='py-2'>FastAPI, Python, SSL/HTTPS</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Model</strong></td><td class='py-2'>NVIDIA PersonaPlex-7B (HuggingFace)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Requirements</strong></td><td class='py-2'>NVIDIA GPU with 16GB+ VRAM, Python 3.10+</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>References</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><a href='https://research.nvidia.com/labs/adlr/files/personaplex/personaplex_preprint.pdf' target='_blank' class='text-blue-500 hover:underline'>NVIDIA PersonaPlex Paper</a></li><li><a href='https://huggingface.co/nvidia/personaplex-7b-v1' target='_blank' class='text-blue-500 hover:underline'>PersonaPlex-7B on HuggingFace</a></li><li><a href='https://github.com/NVIDIA/personaplex' target='_blank' class='text-blue-500 hover:underline'>NVIDIA PersonaPlex GitHub</a></li></ul>",
+            "image": "projects/project-placeholder-2.png",
+            "tags": [
+                {
+                    "name": "NVIDIA",
+                    "color": "green"
+                },
+                {
+                    "name": "STS",
+                    "color": "blue"
+                },
+                {
+                    "name": "Real-Time",
+                    "color": "purple"
+                },
+                {
+                    "name": "Experiment",
+                    "color": "orange"
+                }
+            ],
+            "icon": "AudioLines",
+            "link": "https://github.com/zhnuksyh/testing-sts-personaplex"
+        },
+        {
+            "id": "minestream-tts",
+            "title": "MineStream Voice Synthesis",
+            "status": "Completed",
+            "desc": "Experiment: Local-first AI voice synthesis with Qwen3-TTS dual-model architecture for voice cloning and prompt-based generation.",
+            "fullContent": "<p class='mb-6'><strong>MineStream</strong> is a local-first AI voice generation tool I built to experiment with <strong>Qwen3-TTS</strong>'s dual-model architecture. It enables high-fidelity text-to-speech with three distinct modes: library voices, prompt-based voice design, and zero-shot voice cloning.</p><h3 class='text-xl font-bold mb-3 mt-8'>What I Built</h3><p class='mb-6'>The goal was to create a unified interface for exploring different TTS paradigms, from traditional preset voices to cutting-edge voice cloning. The system runs entirely locally, prioritizing privacy and low-latency generation.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>System Status</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Component</th><th class='py-2 pr-4 font-bold'>Status</th><th class='py-2 font-bold'>Notes</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Frontend (Vite + React + TS)</td><td class='py-2 pr-4'>Working</td><td class='py-2'>Toasts, Avatars, Audio Visualizers</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Backend (FastAPI + SQLite)</td><td class='py-2 pr-4'>Working</td><td class='py-2'>HTTPS enabled for mobile support</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Voice Cloning</td><td class='py-2 pr-4'>Active</td><td class='py-2'>Powered by Qwen3-Base (Zero-Shot)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Voice Design (Prompts)</td><td class='py-2 pr-4'>Active</td><td class='py-2'>Powered by Qwen3-VoiceDesign</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Audio Pipeline</td><td class='py-2 pr-4'>Optimized</td><td class='py-2'>Auto-converts WebM/MP3 to 24kHz WAV</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Three Voice Modes</h3><div class='space-y-4 mb-8'><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Library Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Use preset voices or previously cloned voices from your personal collection. Quick access to proven voice profiles.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Prompt Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Describe any voice in natural language: \"A rusty old pirate\" or \"A cheerful young woman with a British accent\" and the model generates it on the fly.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Cloning Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Upload any audio sample (3-10 seconds) to clone a voice instantly using zero-shot learning. No fine-tuning required.</p></div></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Layer</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>React, Vite, TypeScript, Tailwind CSS, Lucide</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Backend</strong></td><td class='py-2'>FastAPI, SQLAlchemy, SQLite, Pydantic</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>AI Models</strong></td><td class='py-2'>Qwen3-VoiceDesign (Prompts) + Qwen3-Base (Cloning)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Audio</strong></td><td class='py-2'>ffmpeg (pydub), torchaudio, Web Audio API</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Dual-Model Architecture</h3><p class='mb-4'>The system uses two specialized Qwen3 models working together:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Qwen3-VoiceDesign:</strong> Generates voice embeddings from text descriptions. Great for creative voice design without reference audio.</li><li><strong>Qwen3-Base:</strong> Powers zero-shot voice cloning by extracting speaker embeddings from short audio samples.</li></ul><div class='bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500 p-4 mb-6 text-sm'><strong>Note:</strong> First run downloads ~7GB of model weights (VoiceDesign + Base). Ensure sufficient disk space.</div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Key Challenges Solved</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Audio Format Handling:</strong> Backend auto-normalizes WebM/MP3 uploads to 24kHz WAV using ffmpeg</li><li><strong>Mobile Microphone Access:</strong> HTTPS enabled by default for secure mic access on external devices</li><li><strong>Model Switching:</strong> Seamless switching between voice modes without reloading models</li></ul>",
+            "image": "projects/project-placeholder-2.png",
+            "tags": [
+                {
+                    "name": "Qwen3",
+                    "color": "blue"
+                },
+                {
+                    "name": "TTS",
+                    "color": "green"
+                },
+                {
+                    "name": "Voice Clone",
+                    "color": "purple"
+                },
+                {
+                    "name": "Experiment",
+                    "color": "orange"
+                }
+            ],
+            "icon": "Mic",
+            "link": "https://github.com/zhnuksyh/minestream"
+        },
+        {
+            "id": "sonar-speechrag",
+            "title": "SpeechRAG with META SONAR",
+            "status": "Completed",
+            "desc": "Experiment: Cross-modal RAG using Meta's SONAR for real-time context injection into speech - no STT required.",
+            "fullContent": "<p class='mb-6'><strong>SpeechRAG Pipeline</strong> is a real-time, cross-modal Retrieval Augmented Generation (RAG) system I built to experiment with <strong>audio-to-text semantic search</strong>. The key innovation: it retrieves relevant text using raw audio embeddings, completely bypassing traditional Speech-to-Text (STT).</p><h3 class='text-xl font-bold mb-3 mt-8'>The Problem I Wanted to Solve</h3><p class='mb-6'>Traditional voice assistants follow a pipeline: <strong>Audio -> STT -> Text Search -> Response</strong>. Each step adds latency and potential errors. What if we could search directly from audio embeddings?</p><p class='mb-6'>Meta's <strong>SONAR</strong> (Sentence-level multimOdal and laNguage-Agnostic Representations) model can embed both speech and text into a shared 1024-dimensional vector space. This means spoken queries can directly match against text documents!</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Key Features</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Feature</th><th class='py-2 font-bold'>Description</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Cross-Modal RAG</strong></td><td class='py-2'>Retrieves text alerts using raw audio embeddings, no STT required</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Real-Time Processing</strong></td><td class='py-2'>Designed for less than 160ms end-to-end latency</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Meta SONAR Integration</strong></td><td class='py-2'>Uses sonar_speech_encoder_eng and text_sonar_basic_encoder</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Vector Search</strong></td><td class='py-2'>Qdrant for high-performance similarity search</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Neural Dashboard</strong></td><td class='py-2'>Real-time WebSocket frontend to visualize context injections</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>System Architecture</h3><p class='mb-4'>Three containerized services orchestrated via Docker Compose:</p><div class='space-y-4 mb-8'><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>1. SpeechRAG Core</h4><p class='text-sm text-gray-600 dark:text-gray-400'>FastAPI and WebSocket server. The <code>LogicBrain</code> orchestrates the RAG flow: Audio -> Vector -> Search -> Threshold -> Injection. Uses <code>AudioStreamBuffer</code> for sliding window processing.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>2. SONAR Encoder Service</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Dedicated microservice running PyTorch and <code>sonar-space</code>. Exposes HTTP endpoints for encoding Audio (PCM16) and Text into 1024-dim vectors. CUDA GPU accelerated.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>3. Vector Database (Qdrant)</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Stores semantic embeddings of operational alerts. Enables efficient similarity search with tunable thresholds.</p></div></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Layer</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Core</strong></td><td class='py-2'>Python, FastAPI, WebSocket</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>ML</strong></td><td class='py-2'>Meta SONAR, PyTorch, CUDA</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Infrastructure</strong></td><td class='py-2'>Docker Compose, Qdrant</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>HTML/JS Neural Dashboard</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Calibration and Thresholds</h3><p class='mb-4'>The system uses calibrated similarity thresholds to distinguish relevant context from noise:</p><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Scenario</th><th class='py-2 pr-4 font-bold'>Similarity Score</th><th class='py-2 font-bold'>Action</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Valid Query</td><td class='py-2 pr-4'>~0.43+</td><td class='py-2'>Inject Context</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Current Threshold</td><td class='py-2 pr-4'>0.38</td><td class='py-2'>Decision Boundary</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Noise/Silence</td><td class='py-2 pr-4'>~0.26</td><td class='py-2'>Filter Out</td></tr></tbody></table></div><p class='mb-6'>This ensures random conversation or silence does not trigger irrelevant context injections.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Key Learnings</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Cross-modal embeddings work:</strong> SONAR's shared vector space genuinely enables audio-to-text retrieval</li><li><strong>Threshold tuning is critical:</strong> The gap between valid matches (~0.43) and noise (~0.26) required careful calibration</li><li><strong>Dockerization simplifies ML:</strong> Separating the SONAR service made deployment and scaling much cleaner</li></ul>",
+            "image": "projects/project-placeholder-2.png",
+            "tags": [
+                {
+                    "name": "META",
+                    "color": "blue"
+                },
+                {
+                    "name": "RAG",
+                    "color": "green"
+                },
+                {
+                    "name": "Speech",
+                    "color": "purple"
+                },
+                {
+                    "name": "Experiment",
+                    "color": "orange"
+                }
+            ],
+            "icon": "BrainCircuit",
+            "link": "https://github.com/zhnuksyh/sonar-speechrag-pipeline"
+        },
+        {
             "id": "ditto-memory-game",
             "title": "Ditto! Memory Game",
             "status": "Completed",
@@ -78,91 +162,40 @@
             "link": "https://zhnuksyh.github.io/ml-interact/"
         },
         {
-            "id": "wild-breakout",
-            "title": "Wild Breakout",
-            "status": "In-Progress",
-            "desc": "An engaging 2D puzzle-platformer escape room featuring animals and a light-hearted story.",
-            "fullContent": "<p class='mb-6'><strong>Wild Breakout</strong> is a 2D puzzle-platformer that combines escape room mechanics with a light-hearted narrative. Players guide various animals through complex levels, solving environmental puzzles to escape captivity.</p><p class='mb-6'>The game features unique character abilities, tight platforming controls, and a charming pixel art aesthetic.</p><h3 class='text-xl font-bold mb-3 mt-8'>Key Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Puzzle-Platforming:</strong> Solve logic puzzles while navigating platforming challenges.</li><li><strong>Animal Protagonists:</strong> Play as different animals, each with unique abilities required to progress.</li><li><strong>Story-Driven:</strong> Uncover the story behind the animals' capture and their journey to freedom.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Engine:</strong> <a href='https://godotengine.org/' target='_blank' class='text-blue-500 hover:underline'>Godot Game Engine</a></li><li><strong>Language:</strong> GDScript</li><li><strong>Art Design:</strong> Libresprite</li></ul>",
-            "image": "projects/wild-breakout-thumb.png",
-            "tags": [
-                {
-                    "name": "Godot",
-                    "color": "blue"
-                },
-                {
-                    "name": "GDScript",
-                    "color": "green"
-                },
-                {
-                    "name": "Puzzle",
-                    "color": "purple"
-                },
-                {
-                    "name": "2D Art",
-                    "color": "orange"
-                }
-            ],
-            "icon": "Gamepad2",
-            "link": "#"
-        },
-        {
-            "id": "project-orion",
-            "title": "Project Orion",
-            "status": "In-Progress",
-            "desc": "Optical-Radar Integration for Observation & Nowcasting",
-            "fullContent": "<p class='mb-6'><strong>Project Orion</strong> (Optical-Radar Integration for Observation & Nowcasting) is a research initiative optimizing clean water supply in South Africa.</p><p class='mb-6'>Developed for the <strong>EY Open Science Data Challenge 2026</strong>, this project leverages satellite imagery and environmental data to forecast key water quality parameters in inland water bodies, aiming to support public health and sustainability efforts.</p><h3 class='text-xl font-bold mb-3 mt-8'>Project Goals</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Predictive Modeling:</strong> Forecast alkalinity, salinity, and phosphorus levels.</li><li><strong>Data Integration:</strong> Combine satellite imagery, weather patterns, and ground-level sensor data.</li><li><strong>Impact:</strong> Provide actionable insights for water management authorities in South Africa.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Methodology</h3><p class='mb-4'>The solution utilizes advanced machine learning techniques to analyze multi-modal data sources.</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Data Sources:</strong> Sentinel-2 satellite data, local weather station feeds.</li><li><strong>Techniques:</strong> Convolutional Neural Networks (CNNs) for image analysis, Time-series forecasting.</li></ul><p class='mb-6'>For more information on the challenge, visit: <a href='https://challenge.ey.com/' target='_blank' class='text-blue-500 hover:underline'>EY Open Science Data Challenge</a></p>",
+            "id": "qr-forge",
+            "title": "Static QR Forge",
+            "status": "Completed",
+            "desc": "Professional-grade, client-side only QR Code generator. No server, no tracking, no subscriptions - your data never leaves your device.",
+            "fullContent": "<p class='mb-6'><strong>\"I was tired of every online QR generator verifying my credit card just to download a PNG. So I built my own.\"</strong></p><p class='mb-6'>Static QR Forge is a professional-grade, <strong>Client-Side Only</strong> QR Code generator. It runs entirely in your browser, meaning your data never leaves your device, and it will <strong>never</strong> ask you for a subscription.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/qr-forge/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/qr-forge/</a></p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Why This Exists</h3><p class='mb-4'>Most \"Free\" QR generators are:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Dynamic Traps:</strong> They give you a short-link (e.g., qr.co/xyz) that redirects to your URL. When you stop paying, the link dies.</li><li><strong>Data Harvesters:</strong> They track who scans your code.</li><li><strong>Paywalled:</strong> They blur high-quality downloads unless you upgrade to \"Pro\".</li></ul><p class='mb-6'><strong>Static QR Forge is different.</strong> It generates standard, static QR codes directly on your computer. The pixel pattern <em>is</em> the URL. It works offline, forever, and for free.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>100% Client-Side:</strong> No server, no database, no tracking.</li><li><strong>Vector Quality:</strong> Export crystal-clear SVGs or high-res PNGs (2000px+).</li><li><strong>Customizable:</strong> Change colors, shapes, dot styles, and backgrounds.</li><li><strong>Logo Support:</strong> Embed your brand logo seamlessly.</li><li><strong>Privacy Focused:</strong> Secure by design.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>React + TypeScript:</strong> For robust component logic.</li><li><strong>Vite:</strong> For lightning-fast development and building.</li><li><strong>Tailwind CSS:</strong> For the premium, dark-mode UI.</li><li><strong>qr-code-styling:</strong> The powerful engine behind the generation (loaded dynamically).</li></ul>",
             "image": "projects/project-placeholder-2.png",
             "tags": [
                 {
-                    "name": "ML",
+                    "name": "React",
                     "color": "blue"
                 },
                 {
-                    "name": "CNN",
+                    "name": "Privacy",
                     "color": "green"
                 },
                 {
-                    "name": "LSTM",
+                    "name": "Utility",
                     "color": "purple"
-                },
-                {
-                    "name": "SAR",
-                    "color": "orange"
                 }
             ],
-            "icon": "Droplets",
-            "link": "https://challenge.ey.com/"
-        },
-        {
-            "id": "project-ibra",
-            "title": "Project IBRA",
-            "status": "In-Progress",
-            "desc": "IRIS Biometric Recognition with ArcFace loss (UTM FYP).",
-            "fullContent": "<p class='mb-6'><strong>Project IBRA</strong> focuses on IRIS Biometric Recognition using the ArcFace loss function to enhance identification accuracy.</p><p class='mb-6'>This project served as my Final Year Project (FYP) at <strong>Universiti Teknologi Malaysia (UTM)</strong>. It investigates the application of Deep Learning, specifically Convolutional Neural Networks (CNNs), integrated with ArcFace loss to improve the discriminatory power of iris feature embeddings.</p><h3 class='text-xl font-bold mb-3 mt-8'>Key Objectives</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Enhanced Accuracy:</strong> Levaraging ArcFace to maximize class separability in feature space.</li><li><strong>Biometric Security:</strong> Developing robust recognition systems against spoofing attacks.</li><li><strong>Research:</strong> Comparative analysis against traditional loss functions.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'> Technologies</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Core:</strong> Machine Learning (CNN)</li><li><strong>Loss Architecture:</strong> ArcFace (Additive Angular Margin Loss)</li></ul>",
-            "image": "projects/project-placeholder-2.png",
-            "tags": [
-                {
-                    "name": "ML",
-                    "color": "blue"
-                },
-                {
-                    "name": "CNN",
-                    "color": "green"
-                },
-                {
-                    "name": "ArcFace",
-                    "color": "purple"
-                },
-                {
-                    "name": "Research",
-                    "color": "orange"
-                }
-            ],
-            "icon": "ScanEye",
-            "link": "#"
+            "icon": "QrCode",
+            "link": "https://zhnuksyh.github.io/qr-forge/"
         }
     ],
     "articles": [
+        {
+            "id": "cascaded-full-duplex-voice-ai",
+            "title": "Is the Cascaded Approach Still the Way to Go for Full-Duplex Voice AI?",
+            "desc": "Exploring the trade-offs of the STT to LLM to TTS pipeline for real-time conversational AI, from latency challenges to GPU orchestration nightmares.",
+            "date": "February 7, 2026",
+            "readTime": "6 min read",
+            "image": "",
+            "fullContent": "<p class='mb-6'>I've been researching Full-Duplex Speech-to-Speech (STS) systems lately, and the complexity is.. fascinating. While the dream is a Jarvis-like assistant, the architectural choices are anything but simple.</p><p class='mb-6'>Currently, I'm exploring the trade-offs of the <strong>Cascaded Model</strong> (STT to LLM to TTS). It's the standard workhorse, but as I look closer, the challenges are stacking up:</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>1. The Latency Tax</h3><p class='mb-6'>In a world where humans expect a response in <strong>less than 500ms</strong>, a cascade is a race against time. Every millisecond spent in ASR buffering or LLM's first token generation eats into the budget.</p><h3 class='text-xl font-bold mb-3 mt-8'>2. The Interruption Puzzle</h3><p class='mb-6'>How do you design a system that listens while speaking, without it feeling robotic? I'm looking at <strong>VAD (Voice Activity Detection)</strong> strategies that can distinguish between a user's \"uh-huh\" (backchanneling) and a true stop command.</p><h3 class='text-xl font-bold mb-3 mt-8'>3. The Retrieval Bottleneck (RAG and MCP)</h3><p class='mb-6'>Integrating RAG or the Model Context Protocol (MCP) adds a massive thinking delay. Fetching live data via MCP is great for accuracy, but it often breaks the fluid rhythm of a conversation. How do we balance \"being smart\" with \"being fast\" when every extra second of retrieval makes the AI sound like it's stalling?</p><h3 class='text-xl font-bold mb-3 mt-8'>4. The Infrastructure Nightmare (GPU and PyTorch)</h3><p class='mb-6'>This is the part I notice people rarely talk about. Running three separate state-of-the-art models simultaneously is a <strong>VRAM hog</strong>. I'm currently wrestling with GPU memory allocation to prevent OOM (Out of Memory) errors, not to mention the \"version hell\" of incompatible PyTorch dependencies between different STT and TTS libraries.</p><h3 class='text-xl font-bold mb-3 mt-8'>5. Context Window vs. Performance</h3><p class='mb-6'>As the conversation gets longer, managing the context window becomes a double-edged sword. You need the history for coherence, but larger contexts increase the LLM processing time, pushing us further away from that sub-500ms latency goal.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Looking at Native Multi-Modal Models</h3><p class='mb-6'>I'm currently deep in the research for native multi-modal models like <strong>Moshi by Kyutai</strong> and <strong>Qwen2.5-Omni</strong>. Unlike the cascaded mess, these models attempt to handle audio natively, potentially solving the emotion and latency gaps. But moving from cascade to moshi/omni brings a whole new set of research questions regarding steerability and deployment at scale.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Open Questions</h3><p class='mb-6'>I'm still in the thick of this research. If you've worked or are currently working on full-duplex systems, I wonder:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li>How is GPU orchestration handled in production?</li><li>What's the latency of external tool-calling in your systems?</li><li>Is the cascade still viable for high-stakes enterprise use?</li></ul><p class='mb-6'>Would love to hear your thoughts and experiences!</p>"
+        },
         {
             "id": "pwa-game-dev-story",
             "title": "How I Shared My First Mobile (Web) Game with Friends (without the App Store)",
