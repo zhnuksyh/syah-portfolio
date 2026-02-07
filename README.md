@@ -1,5 +1,5 @@
 # Zahin Ukasyah - Portfolio & Blog
-> **Last Updated:** January 11, 2026
+> **Last Updated:** February 7, 2026
 
 ## 👋 About Me
 I am a **Software Engineering student** at **Universiti Teknologi Malaysia**, specializing in **Artificial Intelligence** and **Natural Language Processing (NLP)**. 
@@ -13,11 +13,11 @@ My work bridges the gap between theoretical AI models and practical, scalable ap
 ## 🌟 Latest Updates
 *Automatic snapshot of what I've been working on.*
 
-### 🛠️ Latest Project: **Ditto! Memory Game**
-> A beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.
+### 🛠️ Latest Project: **PersonaPlex Full-Duplex STS**
+> Experiment: Testing NVIDIA's PersonaPlex-7B full-duplex Speech-to-Speech model with ~170ms latency and native turn-taking.
 
-### ✍️ Latest Article: **How I Shared My First Mobile (Web) Game with Friends (without the App Store)**
-> I finally finished building my first mobile game, Ditto!, but hit a snag with App Store fees. Here is how I used Progressive Web Apps (PWA) to share it for free and give it a native feel.
+### ✍️ Latest Article: **Is the Cascaded Approach Still the Way to Go for Full-Duplex Voice AI?**
+> Exploring the trade-offs of the STT to LLM to TTS pipeline for real-time conversational AI, from latency challenges to GPU orchestration nightmares.
 
 ## 📂 What You'll Find Here
 
