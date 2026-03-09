@@ -20,7 +20,7 @@ const AboutSection = () => (
             <div className="grid md:grid-cols-2 gap-12 text-gray-600 dark:text-gray-300 leading-relaxed">
                 <div className="space-y-4">
                     <p>
-                        Hi, I’m Zahin Ukasyah. I am an ML/AI Engineer obsessed with optimizing how machines learn and interact.
+                        Hi, I’m Zahin Ukasyah. I am an AI/ML Engineer obsessed with optimizing how machines learn and interact.
                     </p>
                     <p>
                         Currently, I am applying this passion as an AI/ML Engineer at MIMOS and an ML Research Assistant at UTM, where I dive deep into technical frontiers like Software Design & Architecture, Multi-Agent RAG, Quantization, Vector Embedding, Semantic Search and Fine-Tuning.

@@ -30,34 +30,6 @@
             "link": "https://github.com/zhnuksyh/testing-sts-personaplex"
         },
         {
-            "id": "minestream-tts",
-            "title": "MineStream Voice Synthesis",
-            "status": "Completed",
-            "desc": "Experiment: Local-first AI voice synthesis with Qwen3-TTS dual-model architecture for voice cloning and prompt-based generation.",
-            "fullContent": "<p class='mb-6'><strong>MineStream</strong> is a local-first AI voice generation tool I built to experiment with <strong>Qwen3-TTS</strong>'s dual-model architecture. It enables high-fidelity text-to-speech with three distinct modes: library voices, prompt-based voice design, and zero-shot voice cloning.</p><h3 class='text-xl font-bold mb-3 mt-8'>What I Built</h3><p class='mb-6'>The goal was to create a unified interface for exploring different TTS paradigms, from traditional preset voices to cutting-edge voice cloning. The system runs entirely locally, prioritizing privacy and low-latency generation.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>System Status</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Component</th><th class='py-2 pr-4 font-bold'>Status</th><th class='py-2 font-bold'>Notes</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Frontend (Vite + React + TS)</td><td class='py-2 pr-4'>Working</td><td class='py-2'>Toasts, Avatars, Audio Visualizers</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Backend (FastAPI + SQLite)</td><td class='py-2 pr-4'>Working</td><td class='py-2'>HTTPS enabled for mobile support</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Voice Cloning</td><td class='py-2 pr-4'>Active</td><td class='py-2'>Powered by Qwen3-Base (Zero-Shot)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Voice Design (Prompts)</td><td class='py-2 pr-4'>Active</td><td class='py-2'>Powered by Qwen3-VoiceDesign</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Audio Pipeline</td><td class='py-2 pr-4'>Optimized</td><td class='py-2'>Auto-converts WebM/MP3 to 24kHz WAV</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Three Voice Modes</h3><div class='space-y-4 mb-8'><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Library Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Use preset voices or previously cloned voices from your personal collection. Quick access to proven voice profiles.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Prompt Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Describe any voice in natural language: \"A rusty old pirate\" or \"A cheerful young woman with a British accent\" and the model generates it on the fly.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Cloning Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Upload any audio sample (3-10 seconds) to clone a voice instantly using zero-shot learning. No fine-tuning required.</p></div></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Layer</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>React, Vite, TypeScript, Tailwind CSS, Lucide</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Backend</strong></td><td class='py-2'>FastAPI, SQLAlchemy, SQLite, Pydantic</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>AI Models</strong></td><td class='py-2'>Qwen3-VoiceDesign (Prompts) + Qwen3-Base (Cloning)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Audio</strong></td><td class='py-2'>ffmpeg (pydub), torchaudio, Web Audio API</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Dual-Model Architecture</h3><p class='mb-4'>The system uses two specialized Qwen3 models working together:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Qwen3-VoiceDesign:</strong> Generates voice embeddings from text descriptions. Great for creative voice design without reference audio.</li><li><strong>Qwen3-Base:</strong> Powers zero-shot voice cloning by extracting speaker embeddings from short audio samples.</li></ul><div class='bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500 p-4 mb-6 text-sm'><strong>Note:</strong> First run downloads ~7GB of model weights (VoiceDesign + Base). Ensure sufficient disk space.</div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Key Challenges Solved</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Audio Format Handling:</strong> Backend auto-normalizes WebM/MP3 uploads to 24kHz WAV using ffmpeg</li><li><strong>Mobile Microphone Access:</strong> HTTPS enabled by default for secure mic access on external devices</li><li><strong>Model Switching:</strong> Seamless switching between voice modes without reloading models</li></ul>",
-            "image": "projects/project-placeholder-2.png",
-            "tags": [
-                {
-                    "name": "Qwen3",
-                    "color": "blue"
-                },
-                {
-                    "name": "TTS",
-                    "color": "green"
-                },
-                {
-                    "name": "Voice Clone",
-                    "color": "purple"
-                },
-                {
-                    "name": "Experiment",
-                    "color": "orange"
-                }
-            ],
-            "icon": "Mic",
-            "link": "https://github.com/zhnuksyh/minestream"
-        },
-        {
             "id": "sonar-speechrag",
             "title": "SpeechRAG with META SONAR",
             "status": "Completed",
@@ -84,30 +56,6 @@
             ],
             "icon": "BrainCircuit",
             "link": "https://github.com/zhnuksyh/sonar-speechrag-pipeline"
-        },
-        {
-            "id": "ditto-memory-game",
-            "title": "Ditto! Memory Game",
-            "status": "Completed",
-            "desc": "A beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.",
-            "fullContent": "<p class='mb-6'><strong>Ditto! Memory Game</strong> is a beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/ditto/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/ditto/</a></p><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Multiple Themes:</strong> Choose from different visual themes to suit your mood.</li><li><strong>Difficulty Levels:</strong> Challenge yourself with various grid sizes and difficulty settings.</li><li><strong>Responsive Design:</strong> Play on any device, from desktop to mobile.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Framework:</strong> React</li><li><strong>Build Tool:</strong> Vite</li><li><strong>Styling:</strong> Tailwind CSS</li></ul>",
-            "image": "projects/ditto-thumb.png",
-            "tags": [
-                {
-                    "name": "Vite",
-                    "color": "blue"
-                },
-                {
-                    "name": "Puzzle",
-                    "color": "green"
-                },
-                {
-                    "name": "Relaxing",
-                    "color": "purple"
-                }
-            ],
-            "icon": "Gamepad2",
-            "link": "https://zhnuksyh.github.io/ditto/"
         },
         {
             "id": "git-fluent",
@@ -162,11 +110,63 @@
             "link": "https://zhnuksyh.github.io/ml-interact/"
         },
         {
+            "id": "ditto-memory-game",
+            "title": "Ditto! Memory Game",
+            "status": "Completed",
+            "desc": "A beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.",
+            "fullContent": "<p class='mb-6'><strong>Ditto! Memory Game</strong> is a beautiful, thematic memory matching game built with React, Vite, and Tailwind CSS. Test your memory across different worlds with unique visual styles and vocabularies.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/ditto/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/ditto/</a></p><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Multiple Themes:</strong> Choose from different visual themes to suit your mood.</li><li><strong>Difficulty Levels:</strong> Challenge yourself with various grid sizes and difficulty settings.</li><li><strong>Responsive Design:</strong> Play on any device, from desktop to mobile.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Framework:</strong> React</li><li><strong>Build Tool:</strong> Vite</li><li><strong>Styling:</strong> Tailwind CSS</li></ul>",
+            "image": "projects/ditto-thumb.png",
+            "tags": [
+                {
+                    "name": "Vite",
+                    "color": "blue"
+                },
+                {
+                    "name": "Puzzle",
+                    "color": "green"
+                },
+                {
+                    "name": "Relaxing",
+                    "color": "purple"
+                }
+            ],
+            "icon": "Gamepad2",
+            "link": "https://zhnuksyh.github.io/ditto/"
+        },
+        {
+            "id": "minestream-tts",
+            "title": "MineStream Voice Synthesis",
+            "status": "Completed",
+            "desc": "Experiment: Local-first AI voice synthesis with Qwen3-TTS dual-model architecture for voice cloning and prompt-based generation.",
+            "fullContent": "<p class='mb-6'><strong>MineStream</strong> is a local-first AI voice generation tool I built to experiment with <strong>Qwen3-TTS</strong>'s dual-model architecture. It enables high-fidelity text-to-speech with three distinct modes: library voices, prompt-based voice design, and zero-shot voice cloning.</p><h3 class='text-xl font-bold mb-3 mt-8'>What I Built</h3><p class='mb-6'>The goal was to create a unified interface for exploring different TTS paradigms, from traditional preset voices to cutting-edge voice cloning. The system runs entirely locally, prioritizing privacy and low-latency generation.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>System Status</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Component</th><th class='py-2 pr-4 font-bold'>Status</th><th class='py-2 font-bold'>Notes</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Frontend (Vite + React + TS)</td><td class='py-2 pr-4'>Working</td><td class='py-2'>Toasts, Avatars, Audio Visualizers</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Backend (FastAPI + SQLite)</td><td class='py-2 pr-4'>Working</td><td class='py-2'>HTTPS enabled for mobile support</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Voice Cloning</td><td class='py-2 pr-4'>Active</td><td class='py-2'>Powered by Qwen3-Base (Zero-Shot)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Voice Design (Prompts)</td><td class='py-2 pr-4'>Active</td><td class='py-2'>Powered by Qwen3-VoiceDesign</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'>Audio Pipeline</td><td class='py-2 pr-4'>Optimized</td><td class='py-2'>Auto-converts WebM/MP3 to 24kHz WAV</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Three Voice Modes</h3><div class='space-y-4 mb-8'><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Library Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Use preset voices or previously cloned voices from your personal collection. Quick access to proven voice profiles.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Prompt Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Describe any voice in natural language: \"A rusty old pirate\" or \"A cheerful young woman with a British accent\" and the model generates it on the fly.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Cloning Mode</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Upload any audio sample (3-10 seconds) to clone a voice instantly using zero-shot learning. No fine-tuning required.</p></div></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Layer</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>React, Vite, TypeScript, Tailwind CSS, Lucide</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Backend</strong></td><td class='py-2'>FastAPI, SQLAlchemy, SQLite, Pydantic</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>AI Models</strong></td><td class='py-2'>Qwen3-VoiceDesign (Prompts) + Qwen3-Base (Cloning)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Audio</strong></td><td class='py-2'>ffmpeg (pydub), torchaudio, Web Audio API</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Dual-Model Architecture</h3><p class='mb-4'>The system uses two specialized Qwen3 models working together:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Qwen3-VoiceDesign:</strong> Generates voice embeddings from text descriptions. Great for creative voice design without reference audio.</li><li><strong>Qwen3-Base:</strong> Powers zero-shot voice cloning by extracting speaker embeddings from short audio samples.</li></ul><div class='bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500 p-4 mb-6 text-sm'><strong>Note:</strong> First run downloads ~7GB of model weights (VoiceDesign + Base). Ensure sufficient disk space.</div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Key Challenges Solved</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Audio Format Handling:</strong> Backend auto-normalizes WebM/MP3 uploads to 24kHz WAV using ffmpeg</li><li><strong>Mobile Microphone Access:</strong> HTTPS enabled by default for secure mic access on external devices</li><li><strong>Model Switching:</strong> Seamless switching between voice modes without reloading models</li></ul>",
+            "image": "projects/project-placeholder-2.png",
+            "tags": [
+                {
+                    "name": "Qwen3",
+                    "color": "blue"
+                },
+                {
+                    "name": "TTS",
+                    "color": "green"
+                },
+                {
+                    "name": "Voice Clone",
+                    "color": "purple"
+                },
+                {
+                    "name": "Experiment",
+                    "color": "orange"
+                }
+            ],
+            "icon": "Mic",
+            "link": "https://github.com/zhnuksyh/minestream"
+        },
+        {
             "id": "qr-forge",
-            "title": "Static QR Forge",
+            "title": "Qrypt",
             "status": "Completed",
             "desc": "Professional-grade, client-side only QR Code generator. No server, no tracking, no subscriptions - your data never leaves your device.",
-            "fullContent": "<p class='mb-6'><strong>\"I was tired of every online QR generator verifying my credit card just to download a PNG. So I built my own.\"</strong></p><p class='mb-6'>Static QR Forge is a professional-grade, <strong>Client-Side Only</strong> QR Code generator. It runs entirely in your browser, meaning your data never leaves your device, and it will <strong>never</strong> ask you for a subscription.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/qr-forge/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/qr-forge/</a></p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Why This Exists</h3><p class='mb-4'>Most \"Free\" QR generators are:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Dynamic Traps:</strong> They give you a short-link (e.g., qr.co/xyz) that redirects to your URL. When you stop paying, the link dies.</li><li><strong>Data Harvesters:</strong> They track who scans your code.</li><li><strong>Paywalled:</strong> They blur high-quality downloads unless you upgrade to \"Pro\".</li></ul><p class='mb-6'><strong>Static QR Forge is different.</strong> It generates standard, static QR codes directly on your computer. The pixel pattern <em>is</em> the URL. It works offline, forever, and for free.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>100% Client-Side:</strong> No server, no database, no tracking.</li><li><strong>Vector Quality:</strong> Export crystal-clear SVGs or high-res PNGs (2000px+).</li><li><strong>Customizable:</strong> Change colors, shapes, dot styles, and backgrounds.</li><li><strong>Logo Support:</strong> Embed your brand logo seamlessly.</li><li><strong>Privacy Focused:</strong> Secure by design.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>React + TypeScript:</strong> For robust component logic.</li><li><strong>Vite:</strong> For lightning-fast development and building.</li><li><strong>Tailwind CSS:</strong> For the premium, dark-mode UI.</li><li><strong>qr-code-styling:</strong> The powerful engine behind the generation (loaded dynamically).</li></ul>",
+            "fullContent": "<p class='mb-6'><strong>\"I was tired of every online QR generator verifying my credit card just to download a PNG. So I built my own.\"</strong></p><p class='mb-6'>Qrypt is a professional-grade, <strong>Client-Side Only</strong> QR Code generator. It runs entirely in your browser, meaning your data never leaves your device, and it will <strong>never</strong> ask you for a subscription.</p><p class='mb-6'><strong>Live Demo:</strong> <a href='https://zhnuksyh.github.io/qr-forge/' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>https://zhnuksyh.github.io/qr-forge/</a></p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Why This Exists</h3><p class='mb-4'>Most \"Free\" QR generators are:</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Dynamic Traps:</strong> They give you a short-link (e.g., qr.co/xyz) that redirects to your URL. When you stop paying, the link dies.</li><li><strong>Data Harvesters:</strong> They track who scans your code.</li><li><strong>Paywalled:</strong> They blur high-quality downloads unless you upgrade to \"Pro\".</li></ul><p class='mb-6'><strong>Qrypt is different.</strong> It generates standard, static QR codes directly on your computer. The pixel pattern <em>is</em> the URL. It works offline, forever, and for free.</p><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>100% Client-Side:</strong> No server, no database, no tracking.</li><li><strong>Vector Quality:</strong> Export crystal-clear SVGs or high-res PNGs (2000px+).</li><li><strong>Customizable:</strong> Change colors, shapes, dot styles, and backgrounds.</li><li><strong>Logo Support:</strong> Embed your brand logo seamlessly.</li><li><strong>Privacy Focused:</strong> Secure by design.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>React + TypeScript:</strong> For robust component logic.</li><li><strong>Vite:</strong> For lightning-fast development and building.</li><li><strong>Tailwind CSS:</strong> For the premium, dark-mode UI.</li><li><strong>qr-code-styling:</strong> The powerful engine behind the generation (loaded dynamically).</li></ul>",
             "image": "projects/project-placeholder-2.png",
             "tags": [
                 {
@@ -184,6 +184,62 @@
             ],
             "icon": "QrCode",
             "link": "https://zhnuksyh.github.io/qr-forge/"
+        },
+        {
+            "id": "slydex",
+            "title": "Slydex",
+            "status": "Completed",
+            "desc": "AI-powered presentation generator that transforms raw text and documents into professional multi-slide decks with speaker notes, powered by Google Gemini 2.5 Flash.",
+            "fullContent": "<p class='mb-6'><strong>Slydex</strong> is an AI-powered web application that transforms raw text and documents into professional presentations. Drop in your content via text, file upload, or drag-and-drop, and the system generates a fully structured multi-slide deck complete with speaker notes — all powered by <strong>Google Gemini 2.5 Flash</strong>.</p><h3 class='text-xl font-bold mb-3 mt-8'>Features</h3><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>Rapid Generation:</strong> Convert meeting notes, research, or raw data into a structured deck in seconds.</li><li><strong>File Support:</strong> Drag-and-drop upload of .txt, .md, .json, .csv, .log, and .html files.</li><li><strong>Seven Intelligent Templates:</strong> Automatically selects appropriate layouts — title slides, table of contents, content sections, data tables, image slides, and conclusion slides.</li><li><strong>Auto Speaker Notes:</strong> Talking points are generated for every slide, no manual work required.</li><li><strong>Dynamic Image Generation:</strong> Integrated with Pollinations.ai to produce relevant slide visuals.</li><li><strong>API Usage Monitor:</strong> Visual tracker shows live Gemini request usage against RPM and daily quotas.</li><li><strong>PDF Export:</strong> One-click rendering of the entire deck to a paginated PDF.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Layer</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>React, Vite, TypeScript</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Styling</strong></td><td class='py-2'>Tailwind CSS v4, Lucide React</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>AI</strong></td><td class='py-2'>Google Gemini 2.5 Flash API</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Image Generation</strong></td><td class='py-2'>Pollinations.ai</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Export</strong></td><td class='py-2'>html2canvas + jsPDF</td></tr></tbody></table></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Getting Started</h3><h4 class='font-bold mb-2'>1. Clone the repository</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto text-sm'><code>git clone https://github.com/zhnuksyh/slydex.git\ncd slydex</code></pre><h4 class='font-bold mb-2'>2. Install dependencies</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto text-sm'><code>npm install</code></pre><h4 class='font-bold mb-2'>3. Configure environment</h4><p class='mb-4 text-sm text-gray-600 dark:text-gray-400'>Create a <code>.env</code> file in the project root:</p><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto text-sm'><code>VITE_GEMINI_API_KEY=your_api_key_here</code></pre><h4 class='font-bold mb-2'>4. Start the development server</h4><pre class='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto text-sm'><code>npm run dev</code></pre><p class='mb-6'>Navigate to <code>http://localhost:5173</code> to start generating presentations.</p>",
+            "image": "projects/project-placeholder-2.png",
+            "tags": [
+                {
+                    "name": "React",
+                    "color": "blue"
+                },
+                {
+                    "name": "Gemini",
+                    "color": "green"
+                },
+                {
+                    "name": "TypeScript",
+                    "color": "purple"
+                },
+                {
+                    "name": "AI",
+                    "color": "orange"
+                }
+            ],
+            "icon": "Presentation",
+            "link": "https://github.com/zhnuksyh/slydex"
+        },
+        {
+            "id": "geome",
+            "title": "Geome",
+            "status": "Completed",
+            "desc": "A geometric Boolean puzzle game where players construct target silhouettes using 8 primitive shapes and 4 Boolean operations, achieving 95%+ pixel accuracy to advance.",
+            "fullContent": "<p class='mb-6'><strong>Geome</strong> is a geometric Boolean puzzle game inspired by Bauhaus and De Stijl design principles. Players construct target silhouettes by placing geometric primitives and applying Boolean operations — union, subtract, intersect, and XOR — achieving at least 95% pixel accuracy to complete each level.</p><h3 class='text-xl font-bold mb-3 mt-8'>Game Modes</h3><div class='space-y-4 mb-8'><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Campaign</h4><p class='text-sm text-gray-600 dark:text-gray-400'>10 curated levels with escalating difficulty. Each level has par move counts that determine your star rating — Gold, Silver, or Complete.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Sandbox</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Unrestricted creative mode with all tools available and no scoring — experiment freely with shapes and Boolean operations.</p></div><div class='bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg'><h4 class='font-bold mb-2'>Gallery</h4><p class='text-sm text-gray-600 dark:text-gray-400'>Browse, revisit, and export your saved Sandbox designs as JSON files.</p></div></div><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>How to Play</h3><p class='mb-4'>Select from eight geometric primitives using keyboard shortcuts, then apply Boolean operations to combine shapes and match the target silhouette displayed in the background.</p><ul class='list-disc list-outside pl-5 space-y-2 mb-8'><li><strong>8 Primitives:</strong> Circle (C), Square (S), Triangle (T), Hexagon (H), Pentagon (P), Rhombus (R), Ellipse (L), Semicircle (E).</li><li><strong>4 Boolean Ops:</strong> Union, Subtract, Intersect, XOR — mapped to numeric keys 1–4.</li><li><strong>IoU Matching:</strong> Intersection-over-Union pixel analysis requires ≥95% accuracy to complete a level.</li><li><strong>Star Rating:</strong> Gold (≤gold par moves), Silver (≤bronze par), or Complete (any valid finish).</li><li><strong>Snap Grid:</strong> 30px snapping (toggle with G) for precision alignment.</li><li><strong>Undo/Redo:</strong> Ctrl+Z / Ctrl+Shift+Z for non-destructive editing.</li></ul><hr class='my-8 border-gray-200 dark:border-gray-700' /><h3 class='text-xl font-bold mb-3 mt-8'>Tech Stack</h3><div class='overflow-x-auto mb-8'><table class='min-w-full text-left text-sm'><thead><tr class='border-b dark:border-gray-700'><th class='py-2 pr-4 font-bold'>Layer</th><th class='py-2 font-bold'>Technology</th></tr></thead><tbody><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Frontend</strong></td><td class='py-2'>React 19, TypeScript 5.7, Vite 6</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Styling</strong></td><td class='py-2'>Tailwind CSS v4</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Rendering</strong></td><td class='py-2'>HTML5 Canvas API (dual offscreen compositing)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>Audio</strong></td><td class='py-2'>Web Audio API (procedural synthesis, no audio files)</td></tr><tr class='border-b dark:border-gray-800'><td class='py-2 pr-4'><strong>State</strong></td><td class='py-2'>LocalStorage persistence</td></tr></tbody></table></div><h3 class='text-xl font-bold mb-3 mt-8'>Achievements</h3><p class='mb-4'>Ten unlockable achievements track your progression — from <strong>First Composition</strong> (complete your first level) through <strong>Boolean Master</strong> (use all four operations in one level) to <strong>Perfectionist</strong> (achieve 100% pixel accuracy).</p><h3 class='text-xl font-bold mb-3 mt-8'>Themes</h3><p class='mb-6'>Three visual themes available in-game: <strong>Light</strong>, <strong>Dark</strong>, and <strong>Neon</strong> — switch anytime from the settings menu.</p>",
+            "image": "projects/project-placeholder-2.png",
+            "tags": [
+                {
+                    "name": "React",
+                    "color": "blue"
+                },
+                {
+                    "name": "Canvas",
+                    "color": "green"
+                },
+                {
+                    "name": "TypeScript",
+                    "color": "purple"
+                },
+                {
+                    "name": "Game",
+                    "color": "orange"
+                }
+            ],
+            "icon": "Shapes",
+            "link": "https://github.com/zhnuksyh/geome"
         }
     ],
     "articles": [
@@ -218,7 +274,7 @@
     "experience": [
         {
             "id": "mimos-intern",
-            "title": "AI/NLP Engineer Intern (R&D)",
+            "title": "AI/ML Engineer (R&D)",
             "organization": "MIMOS Berhad, Strategic Agency under MOSTI",
             "description": "My work encompasses the full R&D lifecycle, from designing scalable software architecture and analytics dashboards to conducting deep research on model optimization. <br /> <br /> I drive performance improvements through Fine-Tuning and <br /> Multi-Agent RAG strategies, while integrating multimodal capabilities, including Voice (STT/TTS) and Emotion Analysis.",
             "date": "Date not specified"
