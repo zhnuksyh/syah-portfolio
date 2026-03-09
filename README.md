@@ -1,5 +1,5 @@
 # Zahin Ukasyah - Portfolio & Blog
-> **Last Updated:** February 7, 2026
+> **Last Updated:** March 9, 2026
 
 ## 👋 About Me
 I am a **Software Engineering student** at **Universiti Teknologi Malaysia**, specializing in **Artificial Intelligence** and **Natural Language Processing (NLP)**. 
